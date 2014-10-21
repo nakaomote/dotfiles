@@ -5,7 +5,7 @@ set nocompatible
 syntax on
 if has('gui_running') || &t_Co == 256
     set background=dark
-    colorscheme solarized
+    colorscheme desert
 else
     colorscheme elflord
 endif
