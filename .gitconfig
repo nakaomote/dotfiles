@@ -23,9 +23,6 @@
 [include]
     path        = .gitconfig.local
 
-[user]
-    name        =  William Fletcher
-
 [merge]
     tool        = vimdiff
 
