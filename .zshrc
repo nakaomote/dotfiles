@@ -107,14 +107,14 @@ setopt prompt_subst
 function _git_check_branch {
     local ref
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return 1
-    echo -e "($fg_no_bold[red]"${ref#refs/heads/}"$fg_no_bold[white])-"
+    echo -e "($fg_no_bold[white]"${ref#refs/heads/}"$fg_no_bold[cyan])-"
 }
 
 function _git_check_rebase {
     local git_dir
     git_dir=$(git rev-parse --git-dir 2>/dev/null) || return 1
     if [ -d "$git_dir/rebase-merge" -o -d "$git_dir/rebase-apply" ]; then
-        echo -e "($fg_bold[cyan]rebasing$fg_no_bold[white])-"
+        echo -e "($fg_bold[cyan]rebasing$fg_no_bold[cyan])-"
     else
         return 1
     fi
@@ -125,7 +125,7 @@ function _git_check_stash {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return 1
     if git stash list | \
     awk 'BEGIN { _exit=1 }; $4 == "'${ref#refs/heads/}':" { _exit=0 } END { exit(_exit); } '; then
-        echo -e "($fg_no_bold[cyan]stash$fg_no_bold[white])-"
+        echo -e "($fg_no_bold[cyan]stash$fg_no_bold[cyan])-"
     else
         return 1
     fi
@@ -137,7 +137,7 @@ function _show_logons {
     if [ -z "$logons" ]; then
         return
     fi
-    echo -e "($fg_no_bold[yellow]$logons$fg_no_bold[white])-"
+    echo -e "($fg_no_bold[green]$logons$fg_no_bold[cyan])-"
 }
 
 function _newline_prompt_functions() {
@@ -150,13 +150,13 @@ function _newline_prompt_functions() {
         fi
     done
     if [[ -n ${output} ]]; then
-        echo -e '%{$fg_no_bold[black]%}>%{$fg_no_bold[white]%}>>'${output}
+        echo -e '%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>>'${output}
     fi
 }
 
 autoload -U colors && colors
 
-PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[white]%}>%{$fg_no_bold[white]%}(%{$fg_no_bold[blue]%}%n%{$fg_no_bold[red]%}@%{$fg_no_bold[yellow]%}%m%{$fg_no_bold[white]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[white]%}%)-.)\$(_show_logons)(%{$fg_no_bold[green]%}%D{%a %b %d} %*%{$fg_no_bold[white]%})-(%{$fg_no_bold[yellow]%}%!%{$fg_no_bold[white]%}/%{$fg_no_bold[red]%}%i%{$fg_no_bold[white]%})%(?..-(%{$fg_no_bold[magenta]%}%?%{$fg_no_bold[white]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[white]%}(%{$fg_no_bold[green]%}%~%{$fg_no_bold[white]%}) %%> %{$reset_color%}'
+PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[white]%}%n%{$fg_no_bold[red]%}@%{$fg_no_bold[green]%}%m%{$fg_no_bold[cyan]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[cyan]%}%)-.)\$(_show_logons)(%{$fg_no_bold[yellow]%}%D{%a %b %d} %*%{$fg_no_bold[cyan]%})-(%{$fg_no_bold[green]%}%!%{$fg_no_bold[cyan]%}/%{$fg_no_bold[white]%}%i%{$fg_no_bold[cyan]%})%(?..-(%{$fg_bold[red]%}%?%{$fg_no_bold[cyan]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[yellow]%}%~%{$fg_no_bold[cyan]%}) %%> %{$reset_color%}'
 
 # Path.
 PATH="$HOME/bin:$PATH"
