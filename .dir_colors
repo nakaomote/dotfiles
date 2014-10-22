@@ -1,1 +1,11 @@
-DIR 01;36
+NORMAL    0           # Normal (nonfilename) text
+FILE      0           # Regular file
+DIR       32          # Directory
+LINK      36          # Symbolic link
+ORPHAN    undefined   # Orphaned symbolic link
+MISSING   undefined   # Missing file
+FIFO      31          # Named pipe (FIFO)
+SOCK      33          # Socket
+BLK       44;37       # Block device
+CHR       44;37       # Character device
+EXEC      35          # Executable file
