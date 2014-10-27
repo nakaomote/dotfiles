@@ -95,6 +95,7 @@ set number
 set nrformats-=octal
 
 " Status line
+highli StatusLine ctermbg=black ctermfg=cyan
 set laststatus=2
 set statusline=%<%f\ %h%w%m%r%y%=L:%l/%L\ (%p%%)\ C:%c%V\ B:%o
 
