@@ -133,8 +133,11 @@ function _git_check_stash {
 
 function _show_logons {
     local logons
-    logons="$(w | awk ' FNR > 2 && $1 != ENVIRON["USER"] { print $1 }' | sort | uniq -c | awk ' { print $1":"$2 } ' | xargs)"
+    logons="$(who | awk ' FNR > 2 && $1 != ENVIRON["USER"] { print $1 }' | sort | uniq -c | awk ' { print $1":"$2 } ' | xargs)"
     if [ -z "$logons" ]; then
+        return
+    fi
+    if [ ${#logons} -gt 64 ]; then
         return
     fi
     echo -e "($fg_no_bold[green]$logons$fg_no_bold[cyan])-"
