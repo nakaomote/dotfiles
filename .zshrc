@@ -184,11 +184,13 @@ if ! ssh-add -l > /dev/null 2>&1; then
 fi
 
 # gpg-agent.
-if ! pgrep -U $USER -x gpg-agent > /dev/null; then
-    eval $(gpg-agent --daemon --quiet --write-env-file)
-elif [ -f ~/.gpg-agent-info ]; then
-    . ~/.gpg-agent-info
-    export GPG_AGENT_INFO
+if which gpg-agent &> /dev/null; then
+    if ! pgrep -U $USER -x gpg-agent > /dev/null; then
+        eval $(gpg-agent --daemon --quiet --write-env-file)
+    elif [ -f ~/.gpg-agent-info ]; then
+        . ~/.gpg-agent-info
+        export GPG_AGENT_INFO
+    fi
 fi
 
 # Set the title (in tmux).
