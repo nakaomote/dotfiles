@@ -1,6 +1,12 @@
 " Use vim defaults.
 set nocompatible
 
+" https://github.com/gmarik/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'https://github.com/kien/ctrlp.vim'
+call vundle#end()
+
 " Happy colours.
 syntax on
 if has('gui_running') || &t_Co == 256
@@ -15,7 +21,7 @@ set hlsearch
 
 " Indentation.
 set autoindent
-filetype indent on
+filetype plugin indent on
 
 " C programming.
 set cindent
