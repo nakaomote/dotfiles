@@ -2,8 +2,8 @@ NORMAL    0           # Normal (nonfilename) text
 FILE      0           # Regular file
 DIR       32          # Directory
 LINK      36          # Symbolic link
-ORPHAN    undefined   # Orphaned symbolic link
-MISSING   undefined   # Missing file
+ORPHAN    41;5        # Orphaned symbolic link
+MISSING   41;5        # Missing file
 FIFO      31          # Named pipe (FIFO)
 SOCK      33          # Socket
 BLK       44;37       # Block device
