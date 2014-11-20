@@ -16,11 +16,20 @@ if [ -d ~/.zsh/functions ]; then
 fi
 unset funct
 
-# Dir colours.
-eval $(dircolors $HOME/.dir_colors)
-
-# Aliases.
-alias ls='ls -FA --color=auto'
+# Aliases & dircolors
+case "$(uname)"; in
+    Darwin)
+        alias ls='gls -FA --color=auto'
+        eval $(gdircolors $HOME/.dir_colors)
+    ;;
+    Linux)
+        alias ls='ls -FA --color=auto'
+        eval $(dircolors $HOME/.dir_colors)
+    ;;
+    *)
+        echo "Unhandled system: $(uname -s)?"
+    ;;
+esac
 if [ -n "$STY" ]; then
     alias screen='screen -m -e"^Ss"'
 fi
