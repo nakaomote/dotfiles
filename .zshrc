@@ -87,9 +87,8 @@ autoload -U compinit
 compinit
 zstyle ':completion::complete:*' use-cache 1
 
-# Disable completions.
-compdef -d scp
-compdef -d ssh
+# zsh completions
+zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(< ~/.ssh/known_hosts)"}%%[# ]*}//,/ })'
 
 # process completion
 zstyle ':completion:*:processes' command 'ps -au$USER'
