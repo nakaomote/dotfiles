@@ -34,6 +34,7 @@ if [ -n "$STY" ]; then
     alias screen='screen -m -e"^Ss"'
 fi
 alias grep='grep --colour=auto'
+alias fgrep='fgrep --colour=auto'
 alias ll='ls -lA --color=auto'
 alias uptime='clear; logout' # XXX Training wheels.
 alias ifconfig='clear; logout' # XXX Training wheels.
