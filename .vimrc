@@ -5,6 +5,8 @@ set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'https://github.com/vimwiki/vimwiki'
 call vundle#end()
 
 " Happy colours.
