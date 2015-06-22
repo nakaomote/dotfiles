@@ -15,7 +15,7 @@ call vundle#end()
 syntax on
 if has('gui_running') || &t_Co == 256
     set background=dark
-    colorscheme desert
+    colorscheme gruvbox
 else
     colorscheme elflord
 endif
