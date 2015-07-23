@@ -11,6 +11,9 @@ Plugin 'https://github.com/vimwiki/vimwiki'
 Plugin 'https://github.com/mileszs/ack.vim'
 call vundle#end()
 
+" CtrlP
+let g:ctrlp_root_markers = ['.ctrlp']
+
 " Happy colours.
 syntax on
 if has('gui_running') || &t_Co == 256
