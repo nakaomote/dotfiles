@@ -177,18 +177,19 @@ PATH="$HOME/sbin:$HOME/bin:$PATH"
 umask 022
 
 # ssh-agent.
-if ! ssh-add -l > /dev/null 2>&1; then
-    if [ -f ~/.ssh-agent ]; then
-        if ! pgrep -U $USER -x ssh-agent > /dev/null; then
-            ssh-agent | grep -v ^echo > ~/.ssh-agent
-            . ~/.ssh-agent
-            ssh-add
-        else
-            . ~/.ssh-agent
-            if ! ssh-add -l > /dev/null 2>&1; then
-                ssh-add
-            fi
-        fi
+if [[ -n ${SSH_AGENT_PID} ]] && \
+   [[ -S ${SSH_AUTH_SOCK} ]] && \
+   ps -p ${SSH_AGENT_PID} > /dev/null;
+then
+    if ! ssh-add -l &> /dev/null; then
+        ssh-add
+    fi
+elif [[ -f ~/.ssh-agent ]]; then
+    source ~/.ssh-agent
+    if ! ssh-add -l &> /dev/null; then
+        ssh-agent | grep -v ^echo > ~/.ssh-agent
+        source ~/.ssh-agent
+        ssh-add
     fi
 fi
 
