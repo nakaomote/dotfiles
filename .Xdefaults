@@ -12,6 +12,7 @@ XTerm*fastScroll: True
 *VT100*pointerMode:2
 *VT100*cursorOffTime:175
 *VT100*cursorOnTime:550
+*VT100*cursorColor:green
 *VT100*saveLines:5000
 *VT100*utf8:2
 *VT100*utf8Title:true
@@ -21,3 +22,5 @@ XTerm*fastScroll: True
 *VT100*faceNameDoublesize:IPAGothic:style=Regular
 *VT100*faceSize:11
 *VT100*charClass: 33:48,37:48,45-47:48,64:48,58:48
+*VT100*color4: RoyalBlue
+*VT100*color12: RoyalBlue
