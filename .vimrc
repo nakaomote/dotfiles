@@ -8,8 +8,18 @@ Plugin 'https://github.com/NLKNguyen/papercolor-theme.git'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/vimwiki/vimwiki'
+Plugin 'https://github.com/fatih/vim-go'
 " apt-get install ack-grep
 Plugin 'https://github.com/mileszs/ack.vim'
+" == Snipmate start ==
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+" Optional:
+Plugin 'honza/vim-snippets'
+" == Snipmate end ==
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
 " CtrlP
@@ -97,6 +107,7 @@ autocmd FileType gitcommit set spell
 
 " Highlight various files.
 autocmd BufNewFile,BufRead *.json set filetype=javascript
+autocmd BufNewFile,BufRead *.go set filetype=go
 autocmd BufNewFile,BufRead /tmp/ldapvi-* set filetype=ldif
 
 " Help keywords
@@ -132,3 +143,6 @@ inoremap <F12>         <C-O>:r ~/.tmux-clipboard<CR>
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+" Chef
+autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
