@@ -28,7 +28,6 @@
 
 [core]
     whitespace  =  trailing-space
-    editor      =  vim
 
 [alias]
     st          =  status
