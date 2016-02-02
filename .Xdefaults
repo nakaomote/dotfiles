@@ -6,6 +6,8 @@ XTerm*termName: xterm-256color
 XTerm*messages:false
 XTerm*colorBDMode:true
 XTerm*fastScroll: True
+XTerm*fullscreen: never
+XTerm*omitTranslation: fullscreen
 *VT100*scrollBar: false
 *VT100*visualBell: true
 *VT100*pointerColor:blue
