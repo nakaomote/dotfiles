@@ -20,6 +20,8 @@ Plugin 'honza/vim-snippets'
 " == Snipmate end ==
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+" == Airline ==
+Plugin 'vim-airline/vim-airline'
 call vundle#end()
 
 " CtrlP
@@ -122,7 +124,6 @@ set nrformats-=octal
 " Status line
 highli StatusLine ctermbg=black ctermfg=cyan
 set laststatus=2
-set statusline=%<%f\ %h%w%m%r%y%=L:%l/%L\ (%p%%)\ C:%c%V\ B:%o
 
 if has('gui_running')
     " Shift+Ins in gvim.
