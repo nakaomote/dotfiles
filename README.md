@@ -15,7 +15,7 @@ $ git config -f .gitconfig.local --add user.email "omg@omg.com"
 $ git config -f .gitconfig.local --add user.name "John Smith"
 ~~~~
 
-Vundle
+Bundle
 =========
 ~~~~
 $ export http_proxy="YOURPROXY"
