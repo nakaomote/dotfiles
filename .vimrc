@@ -9,6 +9,7 @@ Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/vimwiki/vimwiki'
 Plugin 'https://github.com/fatih/vim-go'
+Plugin 'https://github.com/vim-scripts/RltvNmbr.vim'
 " apt-get install ack-grep
 Plugin 'https://github.com/mileszs/ack.vim'
 " == Snipmate start ==
@@ -22,6 +23,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 " == Airline ==
 Plugin 'vim-airline/vim-airline'
+" === Tabular (equals/arrow alignment) ===
+Plugin 'https://github.com/godlygeek/tabular'
 call vundle#end()
 
 " CtrlP
@@ -115,8 +118,9 @@ autocmd BufNewFile,BufRead /tmp/ldapvi-* set filetype=ldif
 " Help keywords
 autocmd FileType puppet    set keywordprg=puppet\ describe
 
-" Show line numbers.
+" Show current line number ('number') and relative numbers ('relativenumber')
 set number
+set relativenumber
 
 " Nrformats, which number formats to use (hex, octal, alpha)
 set nrformats-=octal

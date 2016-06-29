@@ -43,7 +43,7 @@ alias ifconfig='clear; logout' # XXX Training wheels.
 #export ftp_proxy="http://cache.telkomsa.net:3128"
 
 # Editor.
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Man pager.
 export MANPAGER="vimmanpager"
