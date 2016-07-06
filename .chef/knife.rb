@@ -7,7 +7,7 @@ knife_node_name = ENV["knife_node_name"] || ENV["USER"]
 log_level                :info
 log_location             STDOUT
 node_name                knife_node_name
-client_key               "#{ENV["HOME"]}/.chef/private.pem"
+client_key               "#{ENV["HOME"]}/.chef/knife.pem"
 chef_server_url          "https://#{ENV["knife_chef_server"]}"
 syntax_check_cache_path  '#{ENV["HOME"]}/.chef/syntax_check_cache'
 cookbook_path            [
