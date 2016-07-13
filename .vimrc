@@ -145,7 +145,7 @@ vnoremap <F12>         <C-C>:r ~/.tmux-clipboard<CR>
 inoremap <F12>         <C-O>:r ~/.tmux-clipboard<CR>
 
 " Use the mouse for scrolling
-set mouse=a
+set mouse=r
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
