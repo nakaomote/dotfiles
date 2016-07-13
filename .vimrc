@@ -48,7 +48,7 @@ filetype plugin indent on
 
 " C programming.
 set cindent
-set cinoptions=>2
+set cinoptions=>4
 
 " smoother output.
 set ttyfast
@@ -61,8 +61,8 @@ set backup
 set backupdir=~/.vim/backups
 
 " Tab.
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 " Turn tabs into spaces
 set expandtab
