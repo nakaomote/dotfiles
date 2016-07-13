@@ -10,7 +10,7 @@ node_name                knife_node_name
 client_key               "#{ENV["HOME"]}/.chef/knife.pem"
 ssl_verify_mode          :verify_none
 chef_server_url          "https://#{ENV["knife_chef_server"]}"
-syntax_check_cache_path  '#{ENV["HOME"]}/.chef/syntax_check_cache'
+syntax_check_cache_path  "#{ENV["HOME"]}/.chef/syntax_check_cache"
 cookbook_path            [
     "#{ENV["HOME"]}/work/my-cookbooks",
 ]
