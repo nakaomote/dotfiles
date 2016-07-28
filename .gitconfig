@@ -20,9 +20,6 @@
     local       =  yellow
     remote      =  green
 
-[include]
-    path        = .gitconfig.local
-
 [merge]
     tool        = vimdiff
 
@@ -45,3 +42,6 @@
 
 [mergetool "vimdiff"]
   cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[include]
+    path        = .gitconfig.local
