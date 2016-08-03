@@ -12,7 +12,7 @@ ssl_verify_mode          :verify_none
 chef_server_url          "https://#{ENV["knife_chef_server"]}"
 syntax_check_cache_path  "#{ENV["HOME"]}/.chef/syntax_check_cache"
 cookbook_path            [
-    "#{ENV["HOME"]}/work/my-cookbooks",
+    "#{ENV["HOME"]}/#{ENV["KNIFE_COOKBOOK_PATH"]}",
 ]
 
 knife[:vault_mode]   = 'client'
