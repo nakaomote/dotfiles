@@ -20,7 +20,5 @@ Vundle
 ~~~~
 $ export http_proxy="YOURPROXY"
 $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ vim -c ':PluginInstall'
 ~~~~
-
-Open vim and run:
-:PluginInstall
