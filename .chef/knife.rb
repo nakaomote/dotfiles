@@ -17,5 +17,6 @@ cookbook_path            [
 
 knife[:vault_mode]   = 'client'
 knife[:vault_admins] = [
+    ENV.include?("KNIFE_VAULT_ADMINS") ? ENV["KNIFE_VAULT_ADMINS"].split(":") : nil,
     knife_node_name,
-                       ]
+].flatten.compact.uniq.sort
