@@ -34,7 +34,9 @@ let g:ctrlp_root_markers = ['.ctrlp']
 syntax on
 if has('gui_running') || &t_Co == 256
     set background=dark
-    colorscheme PaperColor
+    if isdirectory($HOME . "/.vim/bundle/papercolor-theme")
+        colorscheme PaperColor
+    endif
 else
     colorscheme elflord
 endif
