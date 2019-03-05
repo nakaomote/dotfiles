@@ -138,10 +138,6 @@ set relativenumber
 " Nrformats, which number formats to use (hex, octal, alpha)
 set nrformats-=octal
 
-" Status line
-highli StatusLine ctermbg=black ctermfg=cyan
-set laststatus=2
-
 if has('gui_running')
     " Shift+Ins in gvim.
     map! <s-insert> <c-r>*
