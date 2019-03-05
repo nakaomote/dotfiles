@@ -25,7 +25,15 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 " === Tabular (equals/arrow alignment) ===
 Plugin 'https://github.com/godlygeek/tabular'
+" == Java ==
+" https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
+Plugin 'artur-shaik/vim-javacomplete2'
+" http://eclim.org/gettingstarted.html
+Plugin 'dansomething/vim-eclim'
 call vundle#end()
+
+" vim-javacomplete2
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 
 " CtrlP
 let g:ctrlp_root_markers = ['.ctrlp']
