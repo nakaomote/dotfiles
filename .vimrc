@@ -52,6 +52,9 @@ endif
 " Search highlighting.
 set hlsearch
 
+" History saved between buffer changes.
+set hidden
+
 " Indentation.
 set autoindent
 filetype plugin indent on
