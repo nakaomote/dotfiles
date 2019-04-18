@@ -4,12 +4,16 @@ set nocompatible
 " https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'https://github.com/kshenoy/vim-signature'
+Plugin 'https://github.com/Valloric/YouCompleteMe'
 Plugin 'https://github.com/NLKNguyen/papercolor-theme.git'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/vimwiki/vimwiki'
 Plugin 'https://github.com/fatih/vim-go'
 Plugin 'https://github.com/vim-scripts/RltvNmbr.vim'
+" cscope
+Plugin 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
 Plugin 'https://github.com/mileszs/ack.vim'
 " == Snipmate start ==
