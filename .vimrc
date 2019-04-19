@@ -4,6 +4,7 @@ set nocompatible
 " https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'https://github.com/vim-syntastic/syntastic'
 Plugin 'https://github.com/kshenoy/vim-signature'
 Plugin 'https://github.com/Valloric/YouCompleteMe'
 Plugin 'https://github.com/NLKNguyen/papercolor-theme.git'
@@ -41,6 +42,12 @@ autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 
 " CtrlP
 let g:ctrlp_root_markers = ['.ctrlp']
+
+" YouCompleteMe.
+let g:ycm_min_num_of_chars_for_completion = 4
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
 
 " Happy colours.
 syntax on
