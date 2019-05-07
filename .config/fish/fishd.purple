@@ -4,7 +4,10 @@ SET_EXPORT EDITOR:nvim
 SET_EXPORT MANPAGER:/home/wfletcher/bin/vimmanpager
 SET __fish_classic_git_prompt_initialized:\x1d
 SET __fish_init_1_50_0:\x1d
+SET __fish_init_2_39_8:\x1d
+SET __fish_init_2_3_0:\x1d
 SET fish_color_autosuggestion:FFC473
+SET fish_color_cancel:\x2dr
 SET fish_color_command:FF9400
 SET fish_color_comment:A63100
 SET fish_color_cwd:green
