@@ -156,13 +156,13 @@ function _newline_prompt_functions() {
     local prompt_function
     local output
     for prompt_function in ${_newline_prompt_functions[@]}; do
-        data=$($prompt_function)
-        if [ $? -eq 0 ]; then
-            output="$data\n%{$reset_color%}"
+        data="$($prompt_function)"
+        if [[ $? -eq 0 ]]; then
+            output="${data}"
         fi
     done
     if [[ -n ${output} ]]; then
-        echo -e '%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>>'${output}
+        echo -e "$fg_no_bold[black]>$fg_no_bold[cyan]>>${output}\n%{$reset_color%}"
     fi
 }
 
@@ -294,5 +294,6 @@ source "${HOME}/distfiles/zgen/zgen.zsh"
 
 if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
+    zgen load zsh-users/zsh-autosuggestions
     zgen save
 fi
