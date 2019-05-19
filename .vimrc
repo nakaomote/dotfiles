@@ -4,6 +4,8 @@ set nocompatible
 " https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'https://github.com/ensime/ensime-vim'
+Plugin 'https://github.com/derekwyatt/vim-scala'
 Plugin 'https://github.com/Shougo/vimproc.vim'
 Plugin 'https://github.com/idanarye/vim-vebugger'
 Plugin 'https://github.com/majutsushi/tagbar'
@@ -22,11 +24,9 @@ Plugin 'https://github.com/vim-scripts/RltvNmbr.vim'
 Plugin 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
 Plugin 'https://github.com/mileszs/ack.vim'
-" == Snipmate start ==
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-" Optional:
+" ultisnips
+Plugin 'https://github.com/SirVer/ultisnips'
+" Required for Ultisnips:
 Plugin 'honza/vim-snippets'
 " == Snipmate end ==
 Plugin 'tpope/vim-fugitive'
@@ -42,14 +42,24 @@ Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'dansomething/vim-eclim'
 call vundle#end()
 
+" Ultisnips [Note: tab is not usually safe with YouCompleteMe]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" NERDTree find
+nmap <leader>ne :NERDTreeFind<cr><c-w><c-p>
+
 " vim-javacomplete2
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 
 " CtrlP
 let g:ctrlp_root_markers = ['.ctrlp']
 
-" YouCompleteMe.
+" YouCompleteMe [ctrl + p/n setting to not conflict with Ultisnips]
 let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_key_list_select_completion      = ['<C-n>']
+let g:ycm_key_list_previous_completion    = ['<C-p>']
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
