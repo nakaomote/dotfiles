@@ -4,6 +4,7 @@ set nocompatible
 " https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'https://github.com/pedrohdz/vim-yaml-folds'
 Plugin 'https://github.com/ensime/ensime-vim'
 Plugin 'https://github.com/derekwyatt/vim-scala'
 Plugin 'https://github.com/Shougo/vimproc.vim'
