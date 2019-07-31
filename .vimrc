@@ -4,9 +4,9 @@ set nocompatible
 " https://github.com/gmarik/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'https://github.com/pedrohdz/vim-yaml-folds'
-Plugin 'https://github.com/ensime/ensime-vim'
 Plugin 'https://github.com/derekwyatt/vim-scala'
+Plugin 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plugin 'https://github.com/pedrohdz/vim-yaml-folds'
 Plugin 'https://github.com/Shougo/vimproc.vim'
 Plugin 'https://github.com/idanarye/vim-vebugger'
 Plugin 'https://github.com/majutsushi/tagbar'
@@ -42,6 +42,9 @@ Plugin 'artur-shaik/vim-javacomplete2'
 " http://eclim.org/gettingstarted.html
 Plugin 'dansomething/vim-eclim'
 call vundle#end()
+
+" Configuration for vim-scala
+au BufRead,BufNewFile *.sbt set filetype=scala
 
 " Ultisnips [Note: tab is not usually safe with YouCompleteMe]
 let g:UltiSnipsExpandTrigger="<tab>"
