@@ -70,7 +70,7 @@ let g:airline#extensions#tabline#enabled = 1
 syntax on
 if has('gui_running') || &t_Co == 256
     set background=dark
-    if isdirectory($HOME . "/.vim/bundle/papercolor-theme")
+    if isdirectory($HOME . "/.vim/plugged/papercolor-theme")
         colorscheme PaperColor
     endif
 else
