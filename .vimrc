@@ -2,45 +2,44 @@
 set nocompatible
 
 " https://github.com/gmarik/Vundle.vim
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'https://github.com/derekwyatt/vim-scala'
-Plugin 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plugin 'https://github.com/pedrohdz/vim-yaml-folds'
-Plugin 'https://github.com/Shougo/vimproc.vim'
-Plugin 'https://github.com/idanarye/vim-vebugger'
-Plugin 'https://github.com/majutsushi/tagbar'
-Plugin 'https://github.com/vim-scripts/L9'
-Plugin 'https://github.com/vim-scripts/FuzzyFinder'
-Plugin 'https://github.com/vim-syntastic/syntastic'
-Plugin 'https://github.com/kshenoy/vim-signature'
-Plugin 'https://github.com/NLKNguyen/papercolor-theme.git'
-Plugin 'https://github.com/kien/ctrlp.vim'
-Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'https://github.com/vimwiki/vimwiki'
-Plugin 'https://github.com/fatih/vim-go'
-Plugin 'https://github.com/vim-scripts/RltvNmbr.vim'
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/derekwyatt/vim-scala'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'https://github.com/pedrohdz/vim-yaml-folds'
+Plug 'https://github.com/Shougo/vimproc.vim'
+Plug 'https://github.com/idanarye/vim-vebugger'
+Plug 'https://github.com/majutsushi/tagbar'
+Plug 'https://github.com/vim-scripts/L9'
+Plug 'https://github.com/vim-scripts/FuzzyFinder'
+Plug 'https://github.com/vim-syntastic/syntastic'
+Plug 'https://github.com/kshenoy/vim-signature'
+Plug 'https://github.com/NLKNguyen/papercolor-theme.git'
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/vimwiki/vimwiki'
+Plug 'https://github.com/fatih/vim-go'
+Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
 " cscope
-Plugin 'https://github.com/simplyzhao/cscope_maps.vim'
+Plug 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
-Plugin 'https://github.com/mileszs/ack.vim'
+Plug 'https://github.com/mileszs/ack.vim'
 " ultisnips
-Plugin 'https://github.com/SirVer/ultisnips'
+Plug 'https://github.com/SirVer/ultisnips'
 " Required for Ultisnips:
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 " == Snipmate end ==
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " == Airline ==
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 " === Tabular (equals/arrow alignment) ===
-Plugin 'https://github.com/godlygeek/tabular'
+Plug 'https://github.com/godlygeek/tabular'
 " == Java ==
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-Plugin 'artur-shaik/vim-javacomplete2'
+Plug 'artur-shaik/vim-javacomplete2'
 " http://eclim.org/gettingstarted.html
-Plugin 'dansomething/vim-eclim'
-call vundle#end()
+Plug 'dansomething/vim-eclim'
+call plug#end()
 
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
