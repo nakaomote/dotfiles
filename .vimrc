@@ -36,7 +36,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/godlygeek/tabular'
 " == Java ==
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-Plug 'artur-shaik/vim-javacomplete2'
 " http://eclim.org/gettingstarted.html
 Plug 'dansomething/vim-eclim'
 call plug#end()
@@ -51,9 +50,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " NERDTree find
 nmap <leader>ne :NERDTreeFind<cr><c-w><c-p>
-
-" vim-javacomplete2
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 
 " CtrlP
 let g:ctrlp_root_markers = ['.ctrlp']
