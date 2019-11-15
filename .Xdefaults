@@ -20,7 +20,7 @@ XTerm*omitTranslation: fullscreen
 *VT100*utf8Title:true
 *VT100*backarrowKey:false
 *VT100*eightBitInput:false
-*VT100*faceName:Inconsolata
+*VT100*faceName: xft:Menlo:aspect=0.9
 *VT100*faceNameDoublesize:IPAGothic:style=Regular
 *VT100*faceSize:11
 *VT100*charClass: 33:48,37:48,45-47:48,64:48,58:48

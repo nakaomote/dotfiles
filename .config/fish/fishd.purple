@@ -34,5 +34,6 @@ SET fish_pager_color_completion:normal
 SET fish_pager_color_description:555\x1eyellow
 SET fish_pager_color_prefix:cyan
 SET fish_pager_color_progress:cyan
-SET last_chef_server:u2m\x2dchef01\x2eprod\x2ebdd\x2eus\x2elocal/organizations/rakuten_us_bdd_infra
+SET fish_user_paths:/home/wfletcher/bin
+SET last_chef_server:j1p\x2dchef\x2dserver\x2eprod\x2ebdd\x2ejp\x2elocal/organizations/rakuten_jp_bdd_steeringarch
 SET pipefail:\x1d
