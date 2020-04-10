@@ -5,6 +5,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/derekwyatt/vim-scala'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/pedrohdz/vim-yaml-folds'
 Plug 'https://github.com/Shougo/vimproc.vim'
 Plug 'https://github.com/idanarye/vim-vebugger'
@@ -36,8 +37,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/godlygeek/tabular'
 " == Java ==
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-" http://eclim.org/gettingstarted.html
-Plug 'dansomething/vim-eclim'
 call plug#end()
 
 " Configuration for vim-scala
@@ -53,6 +52,7 @@ nmap <leader>ne :NERDTreeFind<cr><c-w><c-p>
 
 " CtrlP
 let g:ctrlp_root_markers = ['.ctrlp']
+let g:ctrlp_cmd = 'CtrlPMRU'
 
 " YouCompleteMe [ctrl + p/n setting to not conflict with Ultisnips]
 let g:ycm_min_num_of_chars_for_completion = 4
