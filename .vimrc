@@ -47,6 +47,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" Vista
+let g:vista_default_executive = 'coc'
+
 " NERDTree find
 nmap <leader>ne :NERDTreeFind<cr><c-w><c-p>
 
