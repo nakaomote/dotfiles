@@ -4,7 +4,7 @@ set nocompatible
 " https://github.com/gmarik/Vundle.vim
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/derekwyatt/vim-scala'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/pedrohdz/vim-yaml-folds'
 Plug 'https://github.com/Shougo/vimproc.vim'
