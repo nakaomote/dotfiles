@@ -181,9 +181,7 @@ vnoremap <F12>         <C-C>:r ~/.tmux-clipboard<CR>
 inoremap <F12>         <C-O>:r ~/.tmux-clipboard<CR>
 
 " Use the mouse for scrolling
-set mouse=r
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+set mouse=a
 
 " Chef
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
