@@ -39,7 +39,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/godlygeek/tabular'
 " == Java ==
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
+" == Vimspector ==
+Plug 'https://github.com/puremourning/vimspector'
 call plug#end()
+
+" == Vimspector ==
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
