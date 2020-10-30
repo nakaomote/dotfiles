@@ -1,0 +1,52 @@
+source "~/.mutt/muttrc.local"
+set folder="imaps://outlook.office365.com/"
+set imap_check_subscribed = "yes"
+set imap_idle
+set imap_keepalive        = 180
+set imap_list_subscribed  = "yes"
+set mail_check            = 90
+set postponed             = +"Drafts"
+set record                = +"Sent Items"
+set spoolfile             = +INBOX
+set ssl_use_sslv3         = "yes"
+set timeout               = 15
+set trash                 = +"Deleted Items"
+set ssl_force_tls = yes
+set smtp_authenticators = "login"
+set signature="~/.mutt/signature"
+set message_cachedir="~/.mutt/message_cache"
+set tmpdir="~/.mutt/tmp"
+set pager_stop="yes"
+set smart_wrap="yes"
+set reverse_name="yes"
+set reverse_realname="yes"
+set editor="nvim"
+set sort_alias="alias"
+set reverse_alias="yes"
+set alias_file="~/.mutt/aliases"
+set sort = 'threads'
+set sort_browser="reverse-date"
+set sort_aux="last-date-received"
+set index_format=" %?M?   ↳&%4C?   %Z      %D     %-15.15n    %s"
+
+# Adress book handling
+source "~/.mutt/aliases"
+
+# Colors
+color   normal      white default
+color   attachment  brightyellow default
+color   hdrdefault  cyan default
+color   indicator   black cyan
+color   markers     brightred default
+color   quoted      green default
+color   signature   cyan default
+color   status      brightgreen blue
+color   tilde       blue default
+color   tree        red default
+color   header      brightgreen default ^From:
+color   header      brightcyan default ^To:
+color   header      brightcyan default ^Reply-To:
+color   header      brightcyan default ^Cc:
+color   header      brightblue default ^Subject:
+color   body        brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color   body        brightblue default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
