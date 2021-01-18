@@ -287,12 +287,3 @@ function backward-word-to-slash () {
 zle -N backward-word-to-slash
 
 bindkey '^[^?' backward-kill-to-slash
-
-# load zgen
-source "${HOME}/distfiles/zgen/zgen.zsh"
-
-if ! zgen saved; then
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-autosuggestions
-    zgen save
-fi
