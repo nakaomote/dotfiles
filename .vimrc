@@ -21,7 +21,7 @@ Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/fatih/vim-go'
 Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
 Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/cohama/lexima.vim'
+Plug 'https://github.com/tmsvg/pear-tree'
 " cscope
 Plug 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
