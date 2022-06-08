@@ -9,11 +9,13 @@ unsetopt nonomatch
 unset profile
 
 # Functions.
+setopt nonomatch
 if [ -d ~/.zsh/functions ]; then
     for funct in ~/.zsh/functions/*; do
         source $funct
     done
 fi
+unsetopt nonomatch
 unset funct
 
 # Aliases & dircolors
