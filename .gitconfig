@@ -24,7 +24,7 @@
     tool        = vimdiff
 
 [core]
-    editor      = vim
+    editor      = nvim
     whitespace  =  trailing-space
 
 [alias]

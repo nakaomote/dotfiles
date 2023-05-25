@@ -18,10 +18,15 @@ Plug 'https://github.com/NLKNguyen/papercolor-theme.git'
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/vimwiki/vimwiki'
-Plug 'https://github.com/fatih/vim-go'
 Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/tmsvg/pear-tree'
+Plug 'https://github.com/mfussenegger/nvim-dap'
+Plug 'https://github.com/mfussenegger/nvim-dap-ui'
+Plug 'https://github.com/leoluz/nvim-dap-go'
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'ellisonleao/gruvbox.nvim'
 " cscope
 Plug 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
@@ -259,3 +264,14 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " Completion.
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
+
+
+nmap <leader>c <Plug>OSCYankOperator
+nmap <leader>cc <leader>c_
+vmap <leader>c <Plug>OSCYankVisual
+
+set redrawtime=10000
+
+autocmd FileType go setlocal noexpandtab
+
+lua require('nvim-treesitter.configs').setup({ ensure_installed = "all", highlight = { enable = true }, })
