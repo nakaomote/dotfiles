@@ -1,6 +1,10 @@
 " Use vim defaults.
 set nocompatible
 
+" disable netrw
+lua vim.g.loaded_netrw = 1
+lua vim.g.loaded_netrwPlugin = 1
+
 " https://github.com/gmarik/Vundle.vim
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/derekwyatt/vim-scala'
@@ -19,14 +23,14 @@ Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
-Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/tmsvg/pear-tree'
 Plug 'https://github.com/mfussenegger/nvim-dap'
 Plug 'https://github.com/mfussenegger/nvim-dap-ui'
 Plug 'https://github.com/leoluz/nvim-dap-go'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ellisonleao/gruvbox.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'https://github.com/nvim-tree/nvim-tree.lua'
 " cscope
 Plug 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
@@ -42,10 +46,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 " === Tabular (equals/arrow alignment) ===
 Plug 'https://github.com/godlygeek/tabular'
-" == Java ==
-" https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
-" == Vimspector ==
-Plug 'https://github.com/puremourning/vimspector'
+Plug 'theHamsta/nvim-dap-virtual-text'
 call plug#end()
 
 " == Vimspector ==
@@ -275,3 +276,23 @@ set redrawtime=10000
 autocmd FileType go setlocal noexpandtab
 
 lua require('nvim-treesitter.configs').setup({ ensure_installed = "all", highlight = { enable = true }, })
+
+lua require("dapui").setup()
+
+lua vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
+lua vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
+lua vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
+lua vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
+lua vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
+lua vim.keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end)
+lua vim.keymap.set('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+lua vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
+lua vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
+lua vim.keymap.set({'n', 'v'}, '<Leader>dh', function() require('dap.ui.widgets').hover() end)
+lua vim.keymap.set({'n', 'v'}, '<Leader>dp', function() require('dap.ui.widgets').preview() end)
+lua vim.keymap.set('n', '<Leader>df', function() local widgets = require('dap.ui.widgets') widgets.centered_float(widgets.frames) end)
+lua vim.keymap.set('n', '<Leader>ds', function() local widgets = require('dap.ui.widgets') widgets.centered_float(widgets.scopes) end)
+
+" nvim-treee
+"lua vim.opt.termguicolors = true
+lua require("nvim-tree").setup()
