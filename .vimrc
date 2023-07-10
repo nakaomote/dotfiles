@@ -21,7 +21,6 @@ Plug 'https://github.com/kshenoy/vim-signature'
 Plug 'https://github.com/NLKNguyen/papercolor-theme.git'
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'https://github.com/vimwiki/vimwiki'
 Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
 Plug 'https://github.com/mfussenegger/nvim-dap'
 Plug 'https://github.com/mfussenegger/nvim-dap-ui'
@@ -48,9 +47,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/godlygeek/tabular'
 Plug 'theHamsta/nvim-dap-virtual-text'
 call plug#end()
-
-" == Vimspector ==
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala

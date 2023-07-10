@@ -48,7 +48,7 @@ alias ifconfig='clear; logout' # XXX Training wheels.
 export EDITOR="nvim"
 
 # Man pager.
-export MANPAGER="vimmanpager"
+export MANPAGER='nvim +Man!'
 
 # Emacs ZLE.
 bindkey -e
