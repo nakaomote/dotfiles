@@ -27,6 +27,7 @@ Plug 'https://github.com/mfussenegger/nvim-dap-ui'
 Plug 'https://github.com/leoluz/nvim-dap-go'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'folke/flash.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'https://github.com/nvim-tree/nvim-tree.lua'
@@ -64,7 +65,7 @@ nmap <leader>ne :NERDTreeFind<cr><c-w><c-p>
 
 " CtrlP
 let g:ctrlp_root_markers = ['.ctrlp']
-let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 " YouCompleteMe [ctrl + p/n setting to not conflict with Ultisnips]
 let g:ycm_min_num_of_chars_for_completion = 4
@@ -179,11 +180,6 @@ if has('gui_running')
     map! <s-insert> <c-r>*
 endif
 
-" Let ctrl+s save files for me.
-noremap  <C-S>              :update<CR>
-vnoremap <C-S>         <Esc>:update<CR>
-inoremap <C-S>         <Esc>:update<CR>
-
 " Suck in tmux clipboard
 noremap  <F12>              :r ~/.tmux-clipboard<CR>
 vnoremap <F12>         <C-C>:r ~/.tmux-clipboard<CR>
@@ -292,3 +288,9 @@ lua vim.keymap.set('n', '<Leader>ds', function() local widgets = require('dap.ui
 " nvim-treee
 "lua vim.opt.termguicolors = true
 lua require("nvim-tree").setup()
+
+" flash
+lua require("flash").setup()
+lua vim.keymap.set('o', 'r', function() require('flash').remote() end)
+lua vim.keymap.set({'n', 'o', 'x'}, '<Leader>s', function() require('flash').treesitter_search() end)
+lua vim.keymap.set({'n', 'o', 'x'}, '<c-s>', function() require('flash').treesitter() end)
