@@ -42,3 +42,6 @@ include dark-violets-256.theme
 news.version=2.6.0
 uda.blocks.type=string
 task=config uda.blocks.label Blocks
+
+uda.jira.type=string
+uda.jira.label=Jira
