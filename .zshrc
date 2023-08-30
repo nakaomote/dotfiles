@@ -119,6 +119,14 @@ function _git_check_branch {
     echo -e "($fg_no_bold[white]"${ref#refs/heads/}"$fg_no_bold[cyan])-"
 }
 
+function _moly_hostname {
+    if [[ -n "${MOLY}" ]]; then
+        echo "${MOLY}"
+    else
+    echo "%m"
+    fi
+}
+
 function _git_check_rebase {
     local git_dir
     git_dir=$(git rev-parse --git-dir 2>/dev/null) || return 1
@@ -168,7 +176,7 @@ function _newline_prompt_functions() {
 
 autoload -U colors && colors
 
-PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[white]%}%n%{$fg_no_bold[red]%}@%{$fg_no_bold[green]%}%m%{$fg_no_bold[cyan]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[cyan]%}%)-.)\$(_show_logons)(%{$fg_no_bold[yellow]%}%D{%a %b %d} %*%{$fg_no_bold[cyan]%})-(%{$fg_no_bold[green]%}%!%{$fg_no_bold[cyan]%}/%{$fg_no_bold[white]%}%i%{$fg_no_bold[cyan]%})%(?..-(%{$fg_bold[red]%}%?%{$fg_no_bold[cyan]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[yellow]%}%~%{$fg_no_bold[cyan]%}) %%> %{$reset_color%}'
+PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[white]%}%n%{$fg_no_bold[red]%}@%{$fg_no_bold[green]%}\$(_moly_hostname)%{$fg_no_bold[cyan]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[cyan]%}%)-.)\$(_show_logons)(%{$fg_no_bold[yellow]%}%D{%a %b %d} %*%{$fg_no_bold[cyan]%})-(%{$fg_no_bold[green]%}%!%{$fg_no_bold[cyan]%}/%{$fg_no_bold[white]%}%i%{$fg_no_bold[cyan]%})%(?..-(%{$fg_bold[red]%}%?%{$fg_no_bold[cyan]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[yellow]%}%~%{$fg_no_bold[cyan]%}) %%> %{$reset_color%}'
 
 # Path.
 PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${PATH}"
