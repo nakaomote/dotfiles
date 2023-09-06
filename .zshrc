@@ -1,4 +1,10 @@
 # /etc/profile.d/*
+
+HISTFILE=~/.zsh_history
+if [[ -f "${HOME}/work/.zsh_history" ]]; then
+    HISTFILE="${HOME}/work/.zsh_history"
+fi
+
 setopt nonomatch
 if [ -d /etc/profile.d ]; then
     for profile in /etc/profile.d/*.sh; do
@@ -64,7 +70,6 @@ mesg n
 
 # History.
 HISTSIZE=500000
-HISTFILE=~/.zsh_history
 SAVEHIST=500000
 setopt append_history
 setopt inc_append_history
