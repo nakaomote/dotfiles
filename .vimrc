@@ -9,7 +9,6 @@ lua vim.g.loaded_netrwPlugin = 1
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/derekwyatt/vim-scala'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'https://github.com/fatih/vim-go'
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/pedrohdz/vim-yaml-folds'
 Plug 'https://github.com/Shougo/vimproc.vim'
@@ -268,7 +267,7 @@ set redrawtime=10000
 
 autocmd FileType go setlocal noexpandtab
 
-lua require('nvim-treesitter.configs').setup({ ensure_installed = "all", highlight = { enable = true }, })
+lua require('nvim-treesitter.configs').setup({ ensure_installed = "go", highlight = { enable = true }, })
 
 lua require("dapui").setup()
 
@@ -296,9 +295,6 @@ lua vim.keymap.set('o', 'r', function() require('flash').remote() end)
 lua vim.keymap.set({'n', 'o', 'x'}, '<Leader>s', function() require('flash').treesitter_search() end)
 lua vim.keymap.set({'n', 'o', 'x'}, '<c-s>', function() require('flash').treesitter() end)
 
-" Center screen on next/previous selection.
-nnoremap n nzz
-nnoremap N Nzz
 " Last and next jump should center too.
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
