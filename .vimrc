@@ -23,6 +23,7 @@ Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
 Plug 'https://github.com/mfussenegger/nvim-dap'
+Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'https://github.com/mfussenegger/nvim-dap-ui'
 Plug 'https://github.com/leoluz/nvim-dap-go'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
@@ -46,7 +47,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 " === Tabular (equals/arrow alignment) ===
 Plug 'https://github.com/godlygeek/tabular'
-Plug 'theHamsta/nvim-dap-virtual-text'
 call plug#end()
 
 " Configuration for vim-scala
@@ -268,8 +268,6 @@ set redrawtime=10000
 autocmd FileType go setlocal noexpandtab
 
 lua require('nvim-treesitter.configs').setup({ ensure_installed = "go", highlight = { enable = true }, })
-
-lua require("dapui").setup()
 
 lua vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
 lua vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
