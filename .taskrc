@@ -45,3 +45,9 @@ task=config uda.blocks.label Blocks
 
 uda.jira.type=string
 uda.jira.label=Jira
+
+uda.wd.label=Working Directory
+uda.wd.type=string
+
+uda.pr.label=Pull request
+uda.pr.type=string
