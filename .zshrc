@@ -186,6 +186,9 @@ PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$f
 # Path.
 PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${PATH}"
 
+# Fortune.
+[[ $(($RANDOM % 4 )) == 1 ]] && [[ -f /usr/games/fortune ]] && fortune
+
 # Umask.
 umask 022
 

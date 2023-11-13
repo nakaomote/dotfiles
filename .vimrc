@@ -17,7 +17,6 @@ Plug 'https://github.com/majutsushi/tagbar'
 Plug 'https://github.com/vim-scripts/L9'
 Plug 'https://github.com/vim-scripts/FuzzyFinder'
 Plug 'https://github.com/vim-syntastic/syntastic'
-Plug 'https://github.com/kshenoy/vim-signature'
 Plug 'https://github.com/NLKNguyen/papercolor-theme.git'
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/scrooloose/nerdtree.git'
@@ -32,6 +31,7 @@ Plug 'folke/flash.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'https://github.com/nvim-tree/nvim-tree.lua'
+Plug 'https://github.com/chentoast/marks.nvim'
 " cscope
 Plug 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
@@ -42,6 +42,7 @@ Plug 'https://github.com/SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " == Snipmate end ==
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 " == Airline ==
 Plug 'vim-airline/vim-airline'
@@ -285,7 +286,7 @@ lua vim.keymap.set('n', '<Leader>ds', function() local widgets = require('dap.ui
 
 " nvim-treee
 "lua vim.opt.termguicolors = true
-lua require("nvim-tree").setup()
+lua require("nvim-tree").setup({ update_focused_file = { enable = true, update_root = true, }, })
 
 " flash
 lua require("flash").setup()
