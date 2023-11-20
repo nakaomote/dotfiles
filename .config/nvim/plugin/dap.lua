@@ -81,5 +81,12 @@ require'marks'.setup {
     -- defaults to false.
     annotate = true,
   },
+  bookmark_1 = {
+    sign = "♦",
+    virt_text = "bookmark group 1",
+    -- explicitly prompt for a virtual line annotation when setting a bookmark from this group.
+    -- defaults to false.
+    annotate = true,
+  },
   mappings = {}
 }

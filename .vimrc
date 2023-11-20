@@ -297,3 +297,6 @@ lua vim.keymap.set({'n', 'o', 'x'}, '<c-s>', function() require('flash').treesit
 " Last and next jump should center too.
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
+
+" start nvim-tree
+autocmd VimEnter *.go NvimTreeOpen
