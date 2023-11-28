@@ -51,3 +51,6 @@ uda.wd.type=string
 
 uda.pr.label=Pull request
 uda.pr.type=string
+
+uda.teams.label=Teams
+uda.teams.type=string
