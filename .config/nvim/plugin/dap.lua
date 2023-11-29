@@ -114,3 +114,9 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+
+require('cmp').setup({
+  sources = {
+    { name = 'buffer' },
+  },
+})

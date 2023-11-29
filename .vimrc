@@ -20,6 +20,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 " lsp-zero
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+" buffer words
+Plug 'https://github.com/hrsh7th/cmp-buffer'
 
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/pedrohdz/vim-yaml-folds'
@@ -186,27 +188,11 @@ if has('gui_running')
     map! <s-insert> <c-r>*
 endif
 
-" Suck in tmux clipboard
-noremap  <F12>              :r ~/.tmux-clipboard<CR>
-vnoremap <F12>         <C-C>:r ~/.tmux-clipboard<CR>
-inoremap <F12>         <C-O>:r ~/.tmux-clipboard<CR>
-
 " Use the mouse for scrolling
 set mouse=a
 
 " Chef
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
-
-" Configuration for coc.nvim (below)
-
-" Smaller updatetime for CursorHold & CursorHoldI
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
 
 " Some server have issues with backup files, see #649
 set nobackup
@@ -215,38 +201,9 @@ set nowritebackup
 " Better display for messages
 set cmdheight=2
 
-"" Use <c-space> for trigger completion.
-"inoremap <silent><expr> <c-space> coc#refresh()
-"
-"" Use `[c` and `]c` for navigate diagnostics
-"nmap <silent> [c <Plug>(coc-diagnostic-prev)
-"nmap <silent> ]c <Plug>(coc-diagnostic-next)
-"
-"" Remap keys for gotos
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-"nmap <silent> gr <Plug>(coc-references)
-"
-"" Remap for do codeAction of current line
-"nmap <leader>ac <Plug>(coc-codeaction)
-
-" Use K for show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if &filetype == 'vim'
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
 nmap <leader>c <Plug>OSCYankOperator
 nmap <leader>cc <leader>c_
 vmap <leader>c <Plug>OSCYankVisual
-
-set redrawtime=10000
 
 autocmd FileType go setlocal noexpandtab
 
