@@ -91,6 +91,13 @@ require'marks'.setup {
   mappings = {}
 }
 
+require('cmp').setup({
+  sources = {
+    { name = 'buffer' },
+    { name = 'nvim_lsp' },
+  },
+})
+
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -112,11 +119,5 @@ require('mason-lspconfig').setup({
   ensure_installed = { "gopls" },
   handlers = {
     lsp_zero.default_setup,
-  },
-})
-
-require('cmp').setup({
-  sources = {
-    { name = 'buffer' },
   },
 })

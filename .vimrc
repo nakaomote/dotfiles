@@ -16,12 +16,14 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'
+" LSP
 Plug 'hrsh7th/cmp-nvim-lsp'
+" buffer words
+Plug 'https://github.com/hrsh7th/cmp-buffer'
+" LuaSnip
 Plug 'L3MON4D3/LuaSnip'
 " lsp-zero
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
-" buffer words
-Plug 'https://github.com/hrsh7th/cmp-buffer'
 
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/pedrohdz/vim-yaml-folds'
