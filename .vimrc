@@ -20,8 +20,12 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 " buffer words
 Plug 'https://github.com/hrsh7th/cmp-buffer'
+" Snippets
+Plug 'https://github.com/saadparwaiz1/cmp_luasnip'
+" Friendly snippets
+Plug 'rafamadriz/friendly-snippets'
 " LuaSnip
-Plug 'L3MON4D3/LuaSnip'
+Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
 " lsp-zero
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 

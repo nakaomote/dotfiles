@@ -92,7 +92,13 @@ require'marks'.setup {
 }
 
 require('cmp').setup({
+  snippet = {
+    expand = function(args)
+      require'luasnip'.lsp_expand(args.body)
+    end
+  },
   sources = {
+    { name = 'luasnip' },
     { name = 'buffer' },
     { name = 'nvim_lsp' },
   },
@@ -121,3 +127,5 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+
+require("luasnip.loaders.from_vscode").lazy_load()
