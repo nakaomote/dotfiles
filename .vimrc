@@ -8,7 +8,19 @@ lua vim.g.loaded_netrwPlugin = 1
 " https://github.com/gmarik/Vundle.vim
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/derekwyatt/vim-scala'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Mason (LSP automation)
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+" LSP Support
+Plug 'neovim/nvim-lspconfig'
+" Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip'
+" lsp-zero
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/pedrohdz/vim-yaml-folds'
 Plug 'https://github.com/Shougo/vimproc.vim'
@@ -19,7 +31,6 @@ Plug 'https://github.com/vim-scripts/FuzzyFinder'
 Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/NLKNguyen/papercolor-theme.git'
 Plug 'https://github.com/kien/ctrlp.vim'
-Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
 Plug 'https://github.com/mfussenegger/nvim-dap'
 Plug 'theHamsta/nvim-dap-virtual-text'
@@ -57,12 +68,6 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 let g:UltiSnipsExpandTrigger=""
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" Vista
-let g:vista_default_executive = 'coc'
-
-" NERDTree find
-nmap <leader>ne :NERDTreeFind<cr><c-w><c-p>
 
 " CtrlP
 let g:ctrlp_root_markers = ['.ctrlp']
@@ -210,21 +215,21 @@ set nowritebackup
 " Better display for messages
 set cmdheight=2
 
-" Use <c-space> for trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use `[c` and `]c` for navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Remap for do codeAction of current line
-nmap <leader>ac <Plug>(coc-codeaction)
+"" Use <c-space> for trigger completion.
+"inoremap <silent><expr> <c-space> coc#refresh()
+"
+"" Use `[c` and `]c` for navigate diagnostics
+"nmap <silent> [c <Plug>(coc-diagnostic-prev)
+"nmap <silent> ]c <Plug>(coc-diagnostic-next)
+"
+"" Remap keys for gotos
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
+"
+"" Remap for do codeAction of current line
+"nmap <leader>ac <Plug>(coc-codeaction)
 
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -236,29 +241,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-" Completion.
-inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
-
 
 nmap <leader>c <Plug>OSCYankOperator
 nmap <leader>cc <leader>c_
@@ -300,3 +282,7 @@ nnoremap <C-i> <C-i>zz
 
 " start nvim-tree
 autocmd VimEnter *.go NvimTreeOpen
+autocmd VimEnter *.go Vista
+
+" close quickfix window:
+autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
