@@ -8,6 +8,7 @@ lua vim.g.loaded_netrwPlugin = 1
 " https://github.com/gmarik/Vundle.vim
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/derekwyatt/vim-scala'
+Plug 'kevinhwang91/nvim-bqf', { 'ft': 'qf' }
 
 " Mason (LSP automation)
 Plug 'williamboman/mason.nvim'
@@ -16,6 +17,8 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'
+" Function signature completions
+Plug 'https://github.com/hrsh7th/cmp-nvim-lsp-signature-help'
 " LSP
 Plug 'hrsh7th/cmp-nvim-lsp'
 " buffer words
@@ -28,6 +31,14 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
 " lsp-zero
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+
+" illuminate
+Plug 'https://github.com/RRethy/vim-illuminate'
+
+
+"fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'liuchengxu/vista.vim'
 Plug 'https://github.com/pedrohdz/vim-yaml-folds'
@@ -231,7 +242,7 @@ lua vim.keymap.set('n', '<Leader>ds', function() local widgets = require('dap.ui
 
 " nvim-treee
 "lua vim.opt.termguicolors = true
-lua require("nvim-tree").setup({ update_focused_file = { enable = true, update_root = true, }, })
+lua require("nvim-tree").setup({ update_focused_file = { enable = true, }, })
 
 " flash
 lua require("flash").setup()

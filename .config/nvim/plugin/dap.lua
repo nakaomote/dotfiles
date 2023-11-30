@@ -98,6 +98,7 @@ require('cmp').setup({
     end
   },
   sources = {
+    { name = 'nvim_lsp_signature_help' },
     { name = 'luasnip' },
     { name = 'buffer' },
     { name = 'nvim_lsp' },
@@ -129,3 +130,8 @@ require('mason-lspconfig').setup({
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
+
+-- change the highlight style
+vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })

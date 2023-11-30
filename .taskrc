@@ -54,3 +54,6 @@ uda.pr.type=string
 
 uda.teams.label=Teams
 uda.teams.type=string
+
+uda.url.label=URL
+uda.url.type=string
