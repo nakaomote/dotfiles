@@ -8,6 +8,8 @@ lua vim.g.loaded_netrwPlugin = 1
 " https://github.com/gmarik/Vundle.vim
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/derekwyatt/vim-scala'
+
+" Better quickfix
 Plug 'kevinhwang91/nvim-bqf', { 'ft': 'qf' }
 
 " Mason (LSP automation)
