@@ -37,7 +37,6 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 " illuminate
 Plug 'https://github.com/RRethy/vim-illuminate'
 
-
 "fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

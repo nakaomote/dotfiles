@@ -46,6 +46,9 @@ task=config uda.blocks.label Blocks
 uda.jira.type=string
 uda.jira.label=Jira
 
+uda.jiraUrl.type=string
+uda.jiraUrl.label=JiraURL
+
 uda.wd.label=Working Directory
 uda.wd.type=string
 
