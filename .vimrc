@@ -50,7 +50,6 @@ Plug 'https://github.com/majutsushi/tagbar'
 Plug 'https://github.com/vim-scripts/L9'
 Plug 'https://github.com/vim-scripts/FuzzyFinder'
 Plug 'https://github.com/vim-syntastic/syntastic'
-Plug 'https://github.com/NLKNguyen/papercolor-theme.git'
 Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'https://github.com/vim-scripts/RltvNmbr.vim'
 Plug 'https://github.com/mfussenegger/nvim-dap'
@@ -65,7 +64,7 @@ Plug 'ray-x/go.nvim'
 Plug 'ray-x/guihua.lua'
 
 Plug 'folke/flash.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
+Plug 'https://github.com/bluz71/vim-nightfly-colors'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'https://github.com/nvim-tree/nvim-tree.lua'
 Plug 'https://github.com/chentoast/marks.nvim'
@@ -111,9 +110,7 @@ let g:airline#extensions#tabline#enabled = 1
 syntax on
 if has('gui_running') || &t_Co == 256
     set background=dark
-    if isdirectory($HOME . "/.vim/plugged/papercolor-theme")
-        colorscheme PaperColor
-    endif
+    colorscheme nightfly
 else
     colorscheme elflord
 endif
