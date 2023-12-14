@@ -17,6 +17,7 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 " LSP Support
 Plug 'neovim/nvim-lspconfig'
+
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'
 " Function signature completions
@@ -58,6 +59,11 @@ Plug 'https://github.com/mfussenegger/nvim-dap-ui'
 Plug 'https://github.com/leoluz/nvim-dap-go'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" golang
+Plug 'ray-x/go.nvim'
+Plug 'ray-x/guihua.lua'
+
 Plug 'folke/flash.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -257,7 +263,6 @@ nnoremap <C-i> <C-i>zz
 
 " start nvim-tree
 autocmd VimEnter *.go NvimTreeOpen
-autocmd VimEnter *.go Vista
 
 " close quickfix window:
 autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
