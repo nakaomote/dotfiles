@@ -136,5 +136,17 @@ vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
 vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
 vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
 
-
 require('go').setup()
+
+require("gopher").setup {
+  commands = {
+    go = "go",
+    gomodifytags = "gomodifytags",
+    gotests = "~/go/bin/gotests", -- also you can set custom command path
+    impl = "impl",
+    iferr = "iferr",
+  },
+}
+
+-- Trailblazer
+require("trailblazer").setup()

@@ -57,7 +57,9 @@ Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'https://github.com/mfussenegger/nvim-dap-ui'
 Plug 'https://github.com/leoluz/nvim-dap-go'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'olexsmir/gopher.nvim'
 
 " golang
 Plug 'ray-x/go.nvim'
@@ -84,6 +86,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 " === Tabular (equals/arrow alignment) ===
 Plug 'https://github.com/godlygeek/tabular'
+
+" Trailblazer
+Plug 'LeonHeidelbach/trailblazer.nvim'
+
 call plug#end()
 
 " Configuration for vim-scala
