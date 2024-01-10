@@ -2,3 +2,7 @@ set relativenumber
 set number
 set visualbell
 set noerrorbells
+set ideajoin
+nmap gi <Action>(GotoImplementation)
+nmap gr <Action>(ShowUsages)
+nmap gR <Action>(FindUsages)
