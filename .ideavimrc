@@ -6,3 +6,6 @@ set ideajoin
 nmap gi <Action>(GotoImplementation)
 nmap gr <Action>(ShowUsages)
 nmap gR <Action>(FindUsages)
+nmap gy <Action>(GotoTypeDeclaration)
+nmap [d <Action>(GotoNextError)
+nmap ]d <Action>(GotoPreviousError)
