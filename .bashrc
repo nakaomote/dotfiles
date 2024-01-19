@@ -115,3 +115,6 @@ if [ -d ~/.bash/functions ]; then
     done
     unset funct
 fi
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

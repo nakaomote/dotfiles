@@ -304,3 +304,6 @@ function backward-word-to-slash () {
 zle -N backward-word-to-slash
 
 bindkey '^[^?' backward-kill-to-slash
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
