@@ -1,7 +1,6 @@
 # /etc/profile.d/*
 
-HISTFILE=~/.zsh_history
-if [[ -f "${HOME}/work/.zsh_history" ]]; then
+if [[ -n "${MOLY}" ]]; then
     HISTFILE="${HOME}/work/.zsh_history"
 fi
 
@@ -27,10 +26,16 @@ unset funct
 # Aliases & dircolors
 case "$(uname)"; in
     Darwin)
+        prompt_at_symbol="green"
+        prompt_hostname="red"
+
         alias ls='gls -FA --color=auto'
         eval $(gdircolors $HOME/.dir_colors)
     ;;
     Linux)
+        prompt_at_symbol="red"
+        prompt_hostname="green"
+
         alias ls='ls -FA --color=auto'
         eval $(dircolors $HOME/.dir_colors)
     ;;
@@ -128,7 +133,7 @@ function _moly_hostname {
     if [[ -n "${MOLY}" ]]; then
         echo "${MOLY}"
     else
-    echo "%m"
+        echo "%m"
     fi
 }
 
@@ -181,7 +186,7 @@ function _newline_prompt_functions() {
 
 autoload -U colors && colors
 
-PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[white]%}%n%{$fg_no_bold[red]%}@%{$fg_no_bold[green]%}\$(_moly_hostname)%{$fg_no_bold[cyan]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[cyan]%}%)-.)\$(_show_logons)(%{$fg_no_bold[yellow]%}%D{%a %b %d} %*%{$fg_no_bold[cyan]%})-(%{$fg_no_bold[green]%}%!%{$fg_no_bold[cyan]%}/%{$fg_no_bold[white]%}%i%{$fg_no_bold[cyan]%})%(?..-(%{$fg_bold[red]%}%?%{$fg_no_bold[cyan]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[yellow]%}%~%{$fg_no_bold[cyan]%}) %%> %{$reset_color%}'
+PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[white]%}%n%{$fg_no_bold[${prompt_at_symbol}]%}@%{$fg_no_bold[${prompt_hostname}]%}\$(_moly_hostname)%{$fg_no_bold[cyan]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[cyan]%}%)-.)\$(_show_logons)(%{$fg_no_bold[yellow]%}%D{%a %b %d} %*%{$fg_no_bold[cyan]%})-(%{$fg_no_bold[green]%}%!%{$fg_no_bold[cyan]%}/%{$fg_no_bold[white]%}%i%{$fg_no_bold[cyan]%})%(?..-(%{$fg_bold[red]%}%?%{$fg_no_bold[cyan]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[yellow]%}%~%{$fg_no_bold[cyan]%}) %%> %{$reset_color%}'
 
 # Path.
 PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${PATH}"
