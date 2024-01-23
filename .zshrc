@@ -321,9 +321,6 @@ if [[ -f /Applications/kitty.app/Contents/MacOS/kitty && ${TERM} == "xterm-kitty
     fi
 fi
 
-# Rancher desktop.
-export PATH="/Users/william.fletcher/.rd/bin:$PATH"
-
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
