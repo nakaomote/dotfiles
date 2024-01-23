@@ -326,3 +326,6 @@ export PATH="/Users/william.fletcher/.rd/bin:$PATH"
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Disable scroll lock.
+stty -ixon
