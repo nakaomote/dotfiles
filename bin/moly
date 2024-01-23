@@ -19,3 +19,7 @@ fi
 if [[ -f "${MOLY_HOME}/.gitconfig.local" ]]; then
     cp "${MOLY_HOME}/.gitconfig.local" "${HOME}/"
 fi
+
+if [[ -f "${HOME}/bin/$(uname)-moly" ]]; then
+    source "${HOME}/bin/$(uname)-moly"
+fi
