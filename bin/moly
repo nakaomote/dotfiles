@@ -8,7 +8,7 @@ if [[ ! -d ".git" ]]; then
     git remote add origin https://github.com/nakaomote/dotfiles
 fi
 
-if ! git branch | fgrep -x "master"; then
+if ! git branch | fgrep -x "* master"; then
     git fetch origin
     rm -f .zshrc .bashrc bash_logout .bash_profile .ideavimrc .config/kitty/kitty.conf
     git checkout -t origin/master
