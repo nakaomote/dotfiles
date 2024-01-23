@@ -305,5 +305,19 @@ zle -N backward-word-to-slash
 
 bindkey '^[^?' backward-kill-to-slash
 
+# Kitty
+if [[ -f /Applications/kitty.app/Contents/MacOS/kitty && ${TERM} == "xterm-kitty" ]]; then
+    if ! which kitty > /dev/null; then
+        export TERMINFO="/Applications/kitty.app/Contents/Resources/kitty/terminfo"
+        PATH+=":/Applications/kitty.app/Contents/MacOS"
+        if [[ -z "${MANPATH}" ]]; then
+            export MANPATH="/usr/share/man:/usr/local/share/man:/Applications/kitty.app/Contents/Resources/man"
+        fi
+    fi
+fi
+
+# Rancher desktop.
+export PATH="/Users/william.fletcher/.rd/bin:$PATH"
+
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
