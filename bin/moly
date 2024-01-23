@@ -2,6 +2,8 @@
 
 set -eu
 
+MOLY_HOME="${HOME}/work/moly"
+
 cd "${HOME}"
 if [[ ! -d ".git" ]]; then
     git init
@@ -12,4 +14,8 @@ if ! git branch | fgrep -x "* master"; then
     git fetch origin
     rm -f .zshrc .bashrc bash_logout .bash_profile .ideavimrc .config/kitty/kitty.conf
     git checkout -t origin/master
+fi
+
+if [[ -f "${MOLY_HOME}/.gitconfig.local" ]]; then
+    cp "${MOLY_HOME}/.gitconfig.local" "${HOME}/"
 fi
