@@ -74,8 +74,6 @@ Plug 'https://github.com/chentoast/marks.nvim'
 Plug 'https://github.com/simplyzhao/cscope_maps.vim'
 " apt-get install ack-grep
 Plug 'https://github.com/mileszs/ack.vim'
-" ultisnips
-Plug 'https://github.com/SirVer/ultisnips'
 " Required for Ultisnips:
 Plug 'honza/vim-snippets'
 " == Snipmate end ==
