@@ -4,7 +4,9 @@ set -eu
 
 for brewPkg in \
     git \
+    go \
     neovim \
+    node \
     $()
 do
     /usr/local/bin/brew list "${brewPkg}" > /dev/null || /usr/local/bin/brew install "${brewPkg}"

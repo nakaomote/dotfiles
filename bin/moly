@@ -2,7 +2,8 @@
 
 set -eu
 
-MOLY_HOME="${HOME}/work/moly"
+export MOLY_HOME="${HOME}/work/moly"
+export PATH="/Users/william.fletcher/.rd/bin:/usr/local/bin:$PATH"
 
 cd "${HOME}"
 if [[ ! -d ".git" ]]; then
