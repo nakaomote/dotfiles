@@ -44,3 +44,5 @@ do
     sdk install "${sdkMan}" || exit 1
 done
 set -eu
+
+touch "${HOME}/.ssh-agent"
