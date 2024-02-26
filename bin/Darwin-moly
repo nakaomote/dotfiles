@@ -3,10 +3,15 @@
 set -eu
 
 for brewPkg in \
+    ack \
+    ffmpeg \
+    gh \
     git \
     go \
+    jq \
     neovim \
     node \
+    tig \
     $()
 do
     /usr/local/bin/brew list "${brewPkg}" > /dev/null || /usr/local/bin/brew install "${brewPkg}"
