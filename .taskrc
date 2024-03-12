@@ -60,3 +60,6 @@ uda.teams.type=string
 
 uda.url.label=URL
 uda.url.type=string
+
+uda.obsdn.label=obsdn
+uda.obsdn.type=string
