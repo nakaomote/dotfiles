@@ -11,3 +11,6 @@ nmap gy <Action>(GotoTypeDeclaration)
 nmap [d <Action>(GotoNextError)
 nmap ]d <Action>(GotoPreviousError)
 imap <C-x><C-o> <Action>(CodeCompletion)
+
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+vmap <leader>fc <Action>(ReformatCode)
