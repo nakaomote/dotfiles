@@ -14,3 +14,6 @@ imap <C-x><C-o> <Action>(CodeCompletion)
 
 nmap <leader>b <Action>(ToggleLineBreakpoint)
 vmap <leader>fc <Action>(ReformatCode)
+nmap [c <Action>(JumpToLastChange)
+nmap ]c <Action>(JumpToNextChange)
+nmap <leader>rn <Action>(RenameElement)
