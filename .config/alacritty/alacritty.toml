@@ -1,0 +1,44 @@
+[[keyboard.bindings]]
+chars = "\u001Bc"
+key = "c"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B\u007F"
+key = "Backspace"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B\r"
+key = "Enter"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BK"
+key = "K"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BJ"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BL"
+key = "L"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001Bm"
+key = "M"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "b"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "f"
+mods = "Command"
