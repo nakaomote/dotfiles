@@ -42,3 +42,13 @@ mods = "Command"
 chars = "\u001Bf"
 key = "f"
 mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bd"
+key = "d"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B."
+key = "."
+mods = "Command"
