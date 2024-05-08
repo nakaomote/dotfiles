@@ -65,3 +65,5 @@ uda.obsdn.label=obsdn
 uda.obsdn.type=string
 
 uda.taskwarrior-tui.shortcuts.1=~/.task/scripts/pr.sh
+uda.taskwarrior-tui.shortcuts.2=~/.task/scripts/teams.sh
+uda.taskwarrior-tui.shortcuts.3=~/.task/scripts/url.sh
