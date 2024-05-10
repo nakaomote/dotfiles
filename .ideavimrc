@@ -3,6 +3,7 @@ set number
 set visualbell
 set noerrorbells
 set ideajoin
+set clipboard+=unnamed
 nmap gi <Action>(GotoImplementation)
 nmap gI <Action>(GotoSuperMethod)
 nmap gr <Action>(ShowUsages)
