@@ -3,14 +3,16 @@ set number
 set visualbell
 set noerrorbells
 set ideajoin
+set showmode
+set hls
 set clipboard+=unnamed
 nmap gi <Action>(GotoImplementation)
 nmap gI <Action>(GotoSuperMethod)
 nmap gr <Action>(ShowUsages)
 nmap gR <Action>(FindUsages)
 nmap gy <Action>(GotoTypeDeclaration)
-nmap [d <Action>(GotoNextError)
-nmap ]d <Action>(GotoPreviousError)
+nmap ]d <Action>(GotoNextError)
+nmap [d <Action>(GotoPreviousError)
 imap <C-x><C-o> <Action>(CodeCompletion)
 
 nmap <leader>b <Action>(ToggleLineBreakpoint)
@@ -21,6 +23,13 @@ nmap <leader>rn <Action>(RenameElement)
 
 nmap <leader>D <Action>(Debug)
 nmap <leader>R <Action>(Run)
+nmap <leader>rr <Action>(Rerun)
 
 nmap <leader>dr <Action>(Resume)
 nmap <leader>S <Action>(Stop)
+
+nmap <leader>dw <Action>(XDebugger.NewWatch)
+
+nmap <Leader>se <Action>(ShowErrorDescription)
+
+vmap <leader>ec <Action>(EvaluateExpression)
