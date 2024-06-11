@@ -84,7 +84,6 @@ setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
 setopt hist_ignore_space
 setopt hist_expire_dups_first
-setopt hist_ignore_space
 setopt shwordsplit
 
 # Options

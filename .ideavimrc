@@ -23,7 +23,7 @@ nmap <leader>rn <Action>(RenameElement)
 
 nmap <leader>D <Action>(Debug)
 nmap <leader>R <Action>(Run)
-nmap <leader>rr <Action>(Rerun)
+nmap <leader>ra <Action>(Rerun)
 
 nmap <leader>dr <Action>(Resume)
 nmap <leader>S <Action>(Stop)
@@ -33,3 +33,8 @@ nmap <leader>dw <Action>(XDebugger.NewWatch)
 nmap <Leader>se <Action>(ShowErrorDescription)
 
 vmap <leader>ec <Action>(EvaluateExpression)
+
+nmap <leader>rp <Action>(Resume)
+nmap <leader>si <Action>(StepIn)
+nmap <leader>sa <Action>(StepOut)
+nmap <leader>so <Action>(StepOver)
