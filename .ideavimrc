@@ -35,6 +35,10 @@ nmap <Leader>se <Action>(ShowErrorDescription)
 vmap <leader>ec <Action>(EvaluateExpression)
 
 nmap <leader>rp <Action>(Resume)
-nmap <leader>si <Action>(StepIn)
+nmap <leader>si <Action>(StepInto)
 nmap <leader>sa <Action>(StepOut)
 nmap <leader>so <Action>(StepOver)
+
+
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
