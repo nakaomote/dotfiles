@@ -42,3 +42,6 @@ nmap <leader>so <Action>(StepOver)
 
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
+
+nmap <leader>st <Action>(FileStructurePopup)
+nmap <leader>si <Action>(SelectIn)
