@@ -23,6 +23,9 @@
 [merge]
     tool        = nvimdiff
 
+[tool]
+    tool        = nvimdiff
+
 [core]
     editor      = nvim
     whitespace  =  trailing-space
