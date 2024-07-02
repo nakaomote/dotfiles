@@ -21,7 +21,7 @@
     remote      =  green
 
 [merge]
-    tool        = vimdiff
+    tool        = nvimdiff
 
 [core]
     editor      = nvim
