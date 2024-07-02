@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ ${1} == "-out" ]]; then
+    tmux showb
+else
+    tmux loadb -
+fi
