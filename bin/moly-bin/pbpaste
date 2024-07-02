@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh macbook pbpaste
+ssh -T macbook "$(basename $0) ${@@Q}"

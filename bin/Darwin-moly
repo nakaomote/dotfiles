@@ -12,6 +12,7 @@ for brewPkg in \
     jq \
     neovim \
     node \
+    rlwrap \
     tig \
     tree \
     $()

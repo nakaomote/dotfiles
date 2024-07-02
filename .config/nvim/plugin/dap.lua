@@ -91,11 +91,15 @@ require'marks'.setup {
   mappings = {}
 }
 
+
 require('cmp').setup({
   snippet = {
     expand = function(args)
       require'luasnip'.lsp_expand(args.body)
     end
+  },
+  completion = {
+    completeopt = 'noinsert'
   },
   sources = {
     { name = 'nvim_lsp' },
@@ -123,7 +127,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { "gopls", "pyright" },
+  ensure_installed = { "gopls", "pyright", "kotlin_language_server" },
   handlers = {
     lsp_zero.default_setup,
   },
