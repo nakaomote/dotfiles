@@ -45,3 +45,5 @@ nmap <C-i> <Action>(Forward)
 
 nmap <leader>st <Action>(FileStructurePopup)
 nmap <leader>si <Action>(SelectIn)
+
+imap <C-y> <Action>(EditorChooseLookupItemReplace)
