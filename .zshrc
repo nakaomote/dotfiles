@@ -193,6 +193,10 @@ if [[ -n "${MOLY}" ]]; then
     PATH="${HOME}/bin/moly-bin:${PATH}"
 fi
 
+# Sane man pages on macos.
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+MANPATH="/usr/local/opt/util-linux/share/man:$MANPATH"
+
 # Fortune.
 [[ $(($RANDOM % 4 )) == 1 ]] && [[ -f /usr/games/fortune ]] && fortune
 
