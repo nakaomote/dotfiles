@@ -5,6 +5,7 @@ set -eu
 for brewPkg in \
     ack \
     blueutil \
+    coreutils \
     ffmpeg \
     gh \
     git \
