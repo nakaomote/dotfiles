@@ -16,6 +16,7 @@ for brewPkg in \
     rlwrap \
     tig \
     tree \
+    util-linux \
     $()
 do
     /usr/local/bin/brew list "${brewPkg}" > /dev/null || /usr/local/bin/brew install "${brewPkg}"
