@@ -47,3 +47,5 @@ nmap <leader>st <Action>(FileStructurePopup)
 nmap <leader>si <Action>(SelectIn)
 
 imap <C-y> <Action>(EditorChooseLookupItemReplace)
+
+nmap <C-y> <Action>(RecentFiles)

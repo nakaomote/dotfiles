@@ -67,6 +67,7 @@ uda.obsdn.type=string
 uda.taskwarrior-tui.shortcuts.1=~/.task/scripts/pr.sh
 uda.taskwarrior-tui.shortcuts.2=~/.task/scripts/teams.sh
 uda.taskwarrior-tui.shortcuts.3=~/.task/scripts/url.sh
+uda.taskwarrior-tui.shortcuts.4=~/.task/scripts/jira.sh
 
 report.next.columns=id,jira,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
 report.next.labels=ID,Jira,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg

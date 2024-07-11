@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh -T macbook "$(basename $0) ${@@Q}"
+ssh -T macbook "open ${@@Q}"
