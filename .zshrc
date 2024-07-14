@@ -220,16 +220,6 @@ elif [[ -f ~/.ssh-agent ]]; then
     fi
 fi
 
-# gpg-agent.
-if which gpg-agent &> /dev/null; then
-    if ! pgrep -U $USER -x gpg-agent > /dev/null; then
-        eval $(gpg-agent --daemon --quiet --write-env-file)
-    elif [ -f ~/.gpg-agent-info ]; then
-        . ~/.gpg-agent-info
-        export GPG_AGENT_INFO
-    fi
-fi
-
 # Set the title (in tmux).
 function _set_tmux_title()
 {
@@ -332,3 +322,13 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # Disable scroll lock.
 stty -ixon
+
+# gpg-agent.
+if which gpg-agent &> /dev/null; then
+    if ! pgrep -U $USER -x gpg-agent > /dev/null; then
+        eval $(gpg-agent --daemon --quiet)
+    elif [ -f ~/.gpg-agent-info ]; then
+        . ~/.gpg-agent-info
+        export GPG_AGENT_INFO
+    fi
+fi
