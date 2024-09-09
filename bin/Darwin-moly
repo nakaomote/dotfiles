@@ -2,6 +2,10 @@
 
 set -eu
 
+if ! which brew; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
 for brewPkg in \
     ack \
     blueutil \
@@ -19,5 +23,5 @@ for brewPkg in \
     util-linux \
     $()
 do
-    /usr/local/bin/brew list "${brewPkg}" > /dev/null || /usr/local/bin/brew install "${brewPkg}"
+    brew list "${brewPkg}" > /dev/null || brew install "${brewPkg}"
 done
