@@ -43,8 +43,8 @@ nmap <leader>so <Action>(StepOver)
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
 
-nmap <leader>st <Action>(FileStructurePopup)
-nmap <leader>si <Action>(SelectIn)
+nmap <leader>St <Action>(FileStructurePopup)
+nmap <leader>Si <Action>(SelectIn)
 
 imap <C-y> <Action>(EditorChooseLookupItemReplace)
 
