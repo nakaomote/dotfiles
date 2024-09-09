@@ -8,17 +8,21 @@ fi
 
 for brewPkg in \
     ack \
+    alacritty \
     blueutil \
     coreutils \
     ffmpeg \
     gh \
     git \
     go \
+    htop \
     jq \
+    kitty \
     neovim \
     node \
     rlwrap \
     tig \
+    tmux \
     tree \
     util-linux \
     $()
