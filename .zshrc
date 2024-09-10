@@ -4,6 +4,27 @@ if [[ -n "${MOLY}" ]]; then
     HISTFILE="${HOME}/work/.zsh_history"
 fi
 
+# Path.
+PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${HOME}/bin/$(uname):/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/util-linux/bin:/usr/local/opt/util-linux/sbin:${PATH}"
+if [[ -n "${MOLY}" ]]; then
+    PATH="${HOME}/bin/moly-bin:${PATH}"
+fi
+
+# Home brew, the latest.
+PATH="/opt/homebrew/bin:${PATH}"
+
+# Kitty macbook.
+# Works after: kitty +kitten ssh
+if [[ -f /Applications/kitty.app/Contents/MacOS/kitty && ${TERM} == "xterm-kitty" ]]; then
+    if [[ -d "/Applications/kitty.app/Contents/Resources/kitty/terminfo" ]]; then
+        PATH+=":/Applications/kitty.app/Contents/MacOS"
+        export TERMINFO="/Applications/kitty.app/Contents/Resources/kitty/terminfo"
+        if [[ -z "${MANPATH}" ]]; then
+            export MANPATH="/usr/share/man:/usr/local/share/man:/Applications/kitty.app/Contents/Resources/man"
+        fi
+    fi
+fi
+
 setopt nonomatch
 if [ -d /etc/profile.d ]; then
     for profile in /etc/profile.d/*.sh; do
@@ -187,15 +208,6 @@ autoload -U colors && colors
 
 PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[white]%}%n%{$fg_no_bold[${prompt_at_symbol}]%}@%{$fg_no_bold[${prompt_hostname}]%}\$(_moly_hostname)%{$fg_no_bold[cyan]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[cyan]%}%)-.)\$(_show_logons)(%{$fg_no_bold[yellow]%}%D{%a %b %d} %*%{$fg_no_bold[cyan]%})-(%{$fg_no_bold[green]%}%!%{$fg_no_bold[cyan]%}/%{$fg_no_bold[white]%}%i%{$fg_no_bold[cyan]%})%(?..-(%{$fg_bold[red]%}%?%{$fg_no_bold[cyan]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[yellow]%}%~%{$fg_no_bold[cyan]%}) %%> %{$reset_color%}'
 
-# Path.
-PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${HOME}/bin/$(uname):/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/util-linux/bin:/usr/local/opt/util-linux/sbin:${PATH}"
-if [[ -n "${MOLY}" ]]; then
-    PATH="${HOME}/bin/moly-bin:${PATH}"
-fi
-
-# Home brew, the latest.
-PATH="/opt/homebrew/bin:${PATH}"
-
 # Sane man pages on macos.
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 MANPATH="/usr/local/opt/util-linux/share/man:$MANPATH"
@@ -308,17 +320,6 @@ function backward-word-to-slash () {
 zle -N backward-word-to-slash
 
 bindkey '^[^?' backward-kill-to-slash
-
-# Kitty
-if [[ -f /Applications/kitty.app/Contents/MacOS/kitty && ${TERM} == "xterm-kitty" ]]; then
-    if ! which kitty > /dev/null; then
-        export TERMINFO="/Applications/kitty.app/Contents/Resources/kitty/terminfo"
-        PATH+=":/Applications/kitty.app/Contents/MacOS"
-        if [[ -z "${MANPATH}" ]]; then
-            export MANPATH="/usr/share/man:/usr/local/share/man:/Applications/kitty.app/Contents/Resources/man"
-        fi
-    fi
-fi
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
