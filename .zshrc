@@ -1,12 +1,12 @@
 # /etc/profile.d/*
 
-if [[ -n "${MOLY}" ]]; then
+if [[ "$(hostname)" == "moly" ]]; then
     HISTFILE="${HOME}/work/.zsh_history"
 fi
 
 # Path.
 PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${HOME}/bin/$(uname):/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/util-linux/bin:/usr/local/opt/util-linux/sbin:${PATH}"
-if [[ -n "${MOLY}" ]]; then
+if [[ "$(hostname)" == "moly" ]]; then
     PATH="${HOME}/bin/moly-bin:${PATH}"
 fi
 
