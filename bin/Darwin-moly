@@ -18,6 +18,8 @@ for brewPkg in \
     htop \
     jq \
     kitty \
+    mutagen-io/mutagen/mutagen \
+    mutagen-io/mutagen/mutagen-compose \
     neovim \
     node \
     rlwrap \
