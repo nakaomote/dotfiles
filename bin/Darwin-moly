@@ -13,6 +13,7 @@ for brewPkg in \
     coreutils \
     dropbear \
     ffmpeg \
+    font-fira-code-nerd-font \
     gh \
     git \
     go \
