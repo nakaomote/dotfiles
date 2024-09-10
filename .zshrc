@@ -193,6 +193,9 @@ if [[ -n "${MOLY}" ]]; then
     PATH="${HOME}/bin/moly-bin:${PATH}"
 fi
 
+# Home brew, the latest.
+PATH="/opt/homebrew/bin:${PATH}"
+
 # Sane man pages on macos.
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 MANPATH="/usr/local/opt/util-linux/share/man:$MANPATH"
