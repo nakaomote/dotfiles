@@ -16,6 +16,7 @@ for brewPkg in \
     font-fira-code-nerd-font \
     gh \
     git \
+    gnu-sed \
     go \
     htop \
     jq \

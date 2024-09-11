@@ -12,6 +12,7 @@ fi
 
 # Home brew, the latest.
 PATH="/opt/homebrew/bin:${PATH}"
+PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Kitty macbook.
 # Works after: kitty +kitten ssh
