@@ -49,6 +49,9 @@ uda.jira.label=Jira
 uda.jiraUrl.type=string
 uda.jiraUrl.label=JiraURL
 
+uda.jiraTitle.type=string
+uda.jiraTitle.label=JiraTitle
+
 uda.wd.label=Working Directory
 uda.wd.type=string
 

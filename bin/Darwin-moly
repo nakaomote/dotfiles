@@ -26,6 +26,7 @@ for brewPkg in \
     mutagen-io/mutagen/mutagen-compose \
     neovim \
     node \
+    pstree \
     rlwrap \
     taskwarrior-tui \
     tig \
