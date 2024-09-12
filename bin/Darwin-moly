@@ -26,6 +26,7 @@ for brewPkg in \
     neovim \
     node \
     rlwrap \
+    taskwarrior-tui \
     tig \
     tmux \
     tree \
