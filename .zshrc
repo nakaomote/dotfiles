@@ -5,14 +5,24 @@ if [[ "$(hostname)" == "moly" ]]; then
 fi
 
 # Path.
-PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${HOME}/bin/$(uname):/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/util-linux/bin:/usr/local/opt/util-linux/sbin:${PATH}"
+PATH="${HOME}/.local/bin:${HOME}/sbin:${HOME}/bin:${HOME}/bin/$(uname):${PATH}"
 if [[ "$(hostname)" == "moly" ]]; then
     PATH="${HOME}/bin/moly-bin:${PATH}"
 fi
 
 # Home brew, the latest.
-PATH="/opt/homebrew/bin:${PATH}"
-PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+if [[ -d "/opt/homebrew/bin" ]]; then
+    PATH="/opt/homebrew/bin:${PATH}"
+    PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:${PATH}"
+    PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:${PATH}"
+    PATH="/opt/homebrew/opt/findutils/libexec/gnubin:${PATH}"
+    PATH="/opt/homebrew/opt/util-linux/bin:${PATH}"
+    PATH="/opt/homebrew/opt/util-linux/sbin:${PATH}"
+
+    # Sane man pages on macos.
+    MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
+    MANPATH="/opt/homebrew/opt/util-linux/share/man:$MANPATH"
+fi
 
 # Kitty macbook.
 # Works after: kitty +kitten ssh
@@ -208,10 +218,6 @@ function _newline_prompt_functions() {
 autoload -U colors && colors
 
 PS1=$'%{$reset_color%}\n\$(_newline_prompt_functions)%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[white]%}%n%{$fg_no_bold[${prompt_at_symbol}]%}@%{$fg_no_bold[${prompt_hostname}]%}\$(_moly_hostname)%{$fg_no_bold[cyan]%})-\$(_git_check_branch)\$(_git_check_rebase)$(_git_check_stash)%(1j.(%{$fg_no_bold[cyan]%}%j%{$fg_no_bold[cyan]%}%)-.)\$(_show_logons)(%{$fg_no_bold[yellow]%}%D{%a %b %d} %*%{$fg_no_bold[cyan]%})-(%{$fg_no_bold[green]%}%!%{$fg_no_bold[cyan]%}/%{$fg_no_bold[white]%}%i%{$fg_no_bold[cyan]%})%(?..-(%{$fg_bold[red]%}%?%{$fg_no_bold[cyan]%}%))->%{$reset_color%}\n%{$fg_no_bold[black]%}>%{$fg_no_bold[cyan]%}(%{$fg_no_bold[yellow]%}%~%{$fg_no_bold[cyan]%}) %%> %{$reset_color%}'
-
-# Sane man pages on macos.
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-MANPATH="/usr/local/opt/util-linux/share/man:$MANPATH"
 
 # Fortune.
 [[ $(($RANDOM % 4 )) == 1 ]] && [[ -f /usr/games/fortune ]] && fortune
