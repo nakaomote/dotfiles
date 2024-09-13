@@ -18,6 +18,7 @@ if [[ -d "/opt/homebrew/bin" ]]; then
     PATH="/opt/homebrew/opt/findutils/libexec/gnubin:${PATH}"
     PATH="/opt/homebrew/opt/util-linux/bin:${PATH}"
     PATH="/opt/homebrew/opt/util-linux/sbin:${PATH}"
+    PATH="/opt/homebrew/opt/libpq/bin:${PATH}"
 
     # Sane man pages on macos.
     MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
