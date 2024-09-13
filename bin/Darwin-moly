@@ -22,18 +22,20 @@ for brewPkg in \
     htop \
     jq \
     kitty \
-    libpq \
     mutagen-io/mutagen/mutagen \
     mutagen-io/mutagen/mutagen-compose \
     neovim \
     node \
+    postgresql \
     pstree \
+    readline \
     rlwrap \
     taskwarrior-tui \
     tig \
     tmux \
     tree \
     util-linux \
+    with-readline \
     $()
 do
     brew list "${brewPkg}" > /dev/null || brew install "${brewPkg}"
