@@ -37,3 +37,8 @@ for brewPkg in \
 do
     brew list "${brewPkg}" > /dev/null || brew install "${brewPkg}"
 done
+
+if [[ ! -f /usr/local/bin/macenv ]]; then
+    sudo curl -sfL https://raw.githubusercontent.com/yuezk/macenv/main/macenv -o /usr/local/bin/macenv
+    sudo chmod +x /usr/local/bin/macenv
+fi
