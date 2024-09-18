@@ -11,6 +11,7 @@ for brewPkg in \
     alacritty \
     blueutil \
     coreutils \
+    curl \
     dropbear \
     ffmpeg \
     findutils \
