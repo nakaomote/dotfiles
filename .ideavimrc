@@ -34,17 +34,20 @@ nmap <Leader>se <Action>(ShowErrorDescription)
 
 vmap <leader>ec <Action>(EvaluateExpression)
 
-nmap <leader>rp <Action>(Resume)
+nmap <leader>re <Action>(Resume)
 nmap <leader>si <Action>(StepInto)
-nmap <leader>sa <Action>(StepOut)
-nmap <leader>so <Action>(StepOver)
+nmap <leader>sou <Action>(StepOut)
+nmap <leader>sov <Action>(StepOver)
 
 
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
 
-nmap <leader>St <Action>(FileStructurePopup)
-nmap <leader>Si <Action>(SelectIn)
+nmap <leader>gs <Action>(FileStructurePopup)
+nmap <leader>gS <Action>(ActivateStructureToolWindow)
+
+# This can navigate between windows (project/terminal/debug/etc)
+nmap <leader>G <Action>(SelectIn)
 
 imap <C-y> <Action>(EditorChooseLookupItemReplace)
 
