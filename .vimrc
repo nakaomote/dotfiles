@@ -232,7 +232,7 @@ vmap <leader>c <Plug>OSCYankVisual
 
 autocmd FileType go setlocal noexpandtab
 
-lua require('nvim-treesitter.configs').setup({ ensure_installed = { "go", "bash", "python", "dockerfile" }, highlight = { enable = true }, })
+lua require('nvim-treesitter.configs').setup({ ensure_installed = { "go", "bash", "python", "dockerfile", }, highlight = { enable = true }, })
 
 lua vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
 lua vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)

@@ -127,7 +127,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { "gopls", "pyright", "kotlin_language_server" },
+  ensure_installed = { "gopls", "pyright", "kotlin_language_server", "ts_ls", },
   handlers = {
     lsp_zero.default_setup,
   },
