@@ -52,3 +52,9 @@ nmap <leader>G <Action>(SelectIn)
 imap <C-y> <Action>(EditorChooseLookupItemReplace)
 
 nmap <C-p> <Action>(RecentFiles)
+
+# Complete parameters (ie; for data class instantiation)
+imap <C-x><C-p> <Action>(ParameterInfo)
+
+# Show recent files
+nmap <C-p> <Action>(RecentFiles)
