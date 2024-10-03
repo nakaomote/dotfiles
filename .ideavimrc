@@ -31,6 +31,7 @@ nmap <leader>fs <Action>(GotoSymbol)
 nmap <leader>fc <Action>(GotoClass)
 nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fa <Action>(GotoAction)
+nmap <leader>gr <Action>(FindInPath)
 
 nmap <leader>dw <Action>(XDebugger.NewWatch)
 
