@@ -15,7 +15,7 @@ nmap ]d <Action>(GotoNextError)
 nmap [d <Action>(GotoPreviousError)
 imap <C-x><C-o> <Action>(CodeCompletion)
 
-nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>bp <Action>(ToggleLineBreakpoint)
 vmap <leader>= <Action>(ReformatCode)
 nmap g, <Action>(JumpToNextChange)
 nmap g; <Action>(JumpToLastChange)
@@ -61,3 +61,9 @@ imap <C-x><C-p> <Action>(ParameterInfo)
 
 # Show recent files
 nmap <C-p> <Action>(RecentFiles)
+
+# Bookmarks
+nmap <leader>bm <Action>(ToggleBookmark)
+
+# Git blame
+nmap <leader>gb <Action>(Annotate)
