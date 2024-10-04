@@ -67,3 +67,10 @@ nmap <leader>bm <Action>(ToggleBookmark)
 
 # Git blame
 nmap <leader>gb <Action>(Annotate)
+
+# Distraction free.
+nmap <leader>df <Action>(ToggleDistractionFreeMode)
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
