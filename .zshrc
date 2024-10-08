@@ -2,6 +2,8 @@
 
 if [[ "$(hostname)" == "moly" ]]; then
     HISTFILE="${HOME}/work/.zsh_history"
+else
+    HISTFILE="${HOME}/.zsh_history"
 fi
 
 # Path.
