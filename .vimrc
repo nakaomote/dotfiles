@@ -1,6 +1,9 @@
 " Use vim defaults.
 set nocompatible
 
+" Yank to clipboard
+set clipboard=unnamedplus
+
 " disable netrw
 lua vim.g.loaded_netrw = 1
 lua vim.g.loaded_netrwPlugin = 1
@@ -194,7 +197,6 @@ autocmd FileType mail      set spell
 autocmd FileType gitcommit set spell
 
 " Highlight various files.
-autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.go set filetype=go
 autocmd BufNewFile,BufRead /tmp/ldapvi-* set filetype=ldif
 
