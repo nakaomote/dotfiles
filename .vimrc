@@ -1,9 +1,6 @@
 " Use vim defaults.
 set nocompatible
 
-" Yank to clipboard
-set clipboard=unnamedplus
-
 " disable netrw
 lua vim.g.loaded_netrw = 1
 lua vim.g.loaded_netrwPlugin = 1
