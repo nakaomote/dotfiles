@@ -64,8 +64,8 @@ uda.teams.type=string
 uda.url.label=URL
 uda.url.type=string
 
-uda.obsdn.label=obsdn
-uda.obsdn.type=string
+uda.noteUrl.label=noteUrl
+uda.noteUrl.type=string
 
 uda.taskwarrior-tui.shortcuts.1=~/.local/share/taskwarrior-tui/scripts/pr.sh
 uda.taskwarrior-tui.shortcuts.2=~/.local/share/taskwarrior-tui/scripts/teams.sh
