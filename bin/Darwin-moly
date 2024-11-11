@@ -20,6 +20,7 @@ for brewPkg in \
     gh \
     git \
     gnu-sed \
+    gnuplot \
     go \
     htop \
     jq \
