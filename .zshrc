@@ -128,6 +128,9 @@ setopt auto_cd
 setopt no_beep
 setopt auto_pushd
 
+# Completions for taskwarrior
+fpath=(/opt/homebrew/Cellar/task/*/share/zsh/site-functions $fpath)
+
 # Compinit.
 autoload -U compinit
 compinit
