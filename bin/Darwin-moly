@@ -22,6 +22,7 @@ for brewPkg in \
     gnu-sed \
     gnuplot \
     go \
+    google-cloud-sdk \
     htop \
     jq \
     kitty \
