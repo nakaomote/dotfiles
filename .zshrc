@@ -129,7 +129,11 @@ setopt no_beep
 setopt auto_pushd
 
 # Completions for taskwarrior
-fpath=(/opt/homebrew/Cellar/task/*/share/zsh/site-functions $fpath)
+setopt extended_glob
+if [[ -n /opt/homebrew/Cellar/task/*/share/zsh/site-functions(#qNY1) ]]; then
+    fpath=(/opt/homebrew/Cellar/task/*/share/zsh/site-functions $fpath)
+fi
+unsetopt extended_glob
 
 # Compinit.
 autoload -U compinit
