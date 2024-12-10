@@ -5,7 +5,6 @@ set noerrorbells
 set ideajoin
 set showmode
 set hls
-set clipboard+=unnamed
 nmap gi <Action>(GotoImplementation)
 nmap gI <Action>(GotoSuperMethod)
 nmap gr <Action>(ShowUsages)
@@ -76,3 +75,6 @@ nmap <leader>df <Action>(ToggleDistractionFreeMode)
 " Easy visual indentation
 vnoremap < <gv
 vnoremap > >gv
+
+" Send selected text to the clipboard
+vnoremap <Leader>c "+y
