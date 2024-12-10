@@ -26,6 +26,7 @@ for brewPkg in \
     htop \
     jq \
     kitty \
+    maccy \
     mutagen-io/mutagen/mutagen \
     mutagen-io/mutagen/mutagen-compose \
     neovim \
