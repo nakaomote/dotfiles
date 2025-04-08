@@ -41,6 +41,7 @@ for brewPkg in \
     tree \
     util-linux \
     with-readline \
+    zbar \
     $()
 do
     brew list "${brewPkg}" > /dev/null || brew install "${brewPkg}"

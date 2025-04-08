@@ -19,6 +19,7 @@ vmap <leader>= <Action>(ReformatCode)
 nmap g, <Action>(JumpToNextChange)
 nmap g; <Action>(JumpToLastChange)
 nmap <leader>rn <Action>(RenameElement)
+nmap <leader>cs <Action>(ChangeSignature)
 
 nmap <leader>D <Action>(Debug)
 nmap <leader>R <Action>(Run)
@@ -54,8 +55,6 @@ nmap <leader>gS <Action>(ActivateStructureToolWindow)
 nmap <leader>G <Action>(SelectIn)
 
 imap <C-y> <Action>(EditorChooseLookupItemReplace)
-
-nmap <C-p> <Action>(RecentFiles)
 
 # Complete parameters (ie; for data class instantiation)
 imap <C-x><C-p> <Action>(ParameterInfo)
