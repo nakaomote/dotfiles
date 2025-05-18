@@ -49,6 +49,16 @@ require("dapui").setup({
   }
 })
 
+-- LSP shortcuts, the way nature intended.
+vim.keymap.del('n', 'gri')
+vim.keymap.del('n', 'grr')
+vim.keymap.del('n', 'gra')
+vim.keymap.del('n', 'grn')
+vim.keymap.set('n', 'gr', vim.lsp.buf.references, { noremap = true, silent = true })
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap = true, silent = true })
+vim.keymap.set('n', 'gA', vim.lsp.buf.code_action, { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true })
+
 require'marks'.setup {
   -- whether to map keybinds or not. default true
   default_mappings = true,
@@ -127,7 +137,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { "gopls", "pyright", "kotlin_language_server", "ts_ls", },
+  ensure_installed = { "pyright", "kotlin_language_server", "ts_ls", },
   handlers = {
     lsp_zero.default_setup,
   },

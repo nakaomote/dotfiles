@@ -153,9 +153,6 @@ set expandtab
 " History.
 set history=10000
 
-" Paste toggle.
-set pastetoggle=<F11>
-
 " Press F10 to toggle list.
 noremap <F10> :set list!<CR>
 set listchars=tab:>.
