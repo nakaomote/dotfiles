@@ -20,6 +20,8 @@ nmap g, <Action>(JumpToNextChange)
 nmap g; <Action>(JumpToLastChange)
 nmap <leader>rn <Action>(RenameElement)
 nmap <leader>cs <Action>(ChangeSignature)
+nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
+vmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
 
 nmap <leader>D <Action>(Debug)
 nmap <leader>R <Action>(Run)
@@ -64,6 +66,7 @@ nmap <C-p> <Action>(RecentFiles)
 
 # Bookmarks
 nmap <leader>bm <Action>(ToggleBookmark)
+nmap <leader>sm <Action>(ShowBookmarks)
 
 # Git blame
 nmap <leader>gb <Action>(Annotate)
