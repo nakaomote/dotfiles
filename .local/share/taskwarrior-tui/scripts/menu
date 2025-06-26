@@ -3,7 +3,10 @@ set -eu
 clear
 task "${1}"
 cd "$(dirname $0)"
-select item in *.sh; do
+select item in *.sh exit; do
+    if [[ ${item} == "exit" ]]; then
+        break
+    fi
     "./${item}" "${1}"
     break
 done
