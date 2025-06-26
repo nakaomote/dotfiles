@@ -14,9 +14,6 @@
 
 # Use the command 'task show' to see all defaults and overrides
 
-# Files
-data.location=$HOME/work/.task/
-
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
 
@@ -39,7 +36,7 @@ include dark-violets-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
 
-news.version=3.1.0
+news.version=3.4.1
 uda.blocks.type=string
 task=config uda.blocks.label Blocks
 
