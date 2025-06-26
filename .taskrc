@@ -64,10 +64,7 @@ uda.url.type=string
 uda.noteUrl.label=noteUrl
 uda.noteUrl.type=string
 
-uda.taskwarrior-tui.shortcuts.1=~/.local/share/taskwarrior-tui/scripts/pr.sh
-uda.taskwarrior-tui.shortcuts.2=~/.local/share/taskwarrior-tui/scripts/teams.sh
-uda.taskwarrior-tui.shortcuts.3=~/.local/share/taskwarrior-tui/scripts/url.sh
-uda.taskwarrior-tui.shortcuts.4=~/.local/share/taskwarrior-tui/scripts/jira.sh
+uda.taskwarrior-tui.shortcuts.1=~/.local/share/taskwarrior-tui/scripts/menu
 
 report.next.columns=id,jira,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
 report.next.labels=ID,Jira,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg

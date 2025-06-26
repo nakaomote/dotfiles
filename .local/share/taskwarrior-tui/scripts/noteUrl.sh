@@ -1,3 +1,3 @@
 #!/bin/bash
-set -x
-open "$(task _get "${1}.$(basename ${0%%.sh})")"
+set -eux
+open "$(task _get "${2}.$(basename ${0%%.sh})")"

@@ -1,0 +1,9 @@
+#!/bin/bash
+set -eu
+clear
+task "${1}"
+cd "$(dirname $0)"
+select item in *.sh; do
+    "./${item}" "${1}"
+    break
+done
