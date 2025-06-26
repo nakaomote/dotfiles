@@ -22,6 +22,7 @@ nmap <leader>rn <Action>(RenameElement)
 nmap <leader>cs <Action>(ChangeSignature)
 nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
 vmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>td <Action>(ActivateTODOToolWindow)
 
 nmap <leader>D <Action>(Debug)
 nmap <leader>R <Action>(Run)
@@ -33,6 +34,7 @@ nmap <leader>fs <Action>(GotoSymbol)
 nmap <leader>fc <Action>(GotoClass)
 nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fa <Action>(GotoAction)
+nmap <leader>am <Action>(GotoAction)
 nmap <leader>gr <Action>(FindInPath)
 
 nmap <leader>cn <Action>(NewFile)
@@ -80,3 +82,6 @@ vnoremap > >gv
 
 " Send selected text to the clipboard
 vnoremap <Leader>c "+y
+
+" Recent locations
+nmap <leader>rl <Action>(RecentLocations)
