@@ -26,6 +26,7 @@ if [[ -d "/opt/homebrew/bin" ]]; then
     # Sane man pages on macos.
     MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
     MANPATH="/opt/homebrew/opt/util-linux/share/man:$MANPATH"
+    MANPATH="/opt/homebrew/opt/findutils/libexec/gnuman:$MANPATH"
 fi
 
 # Kitty macbook.

@@ -85,3 +85,6 @@ vnoremap <Leader>c "+y
 
 " Recent locations
 nmap <leader>rl <Action>(RecentLocations)
+
+" Surround (ie; if/else, etc)
+map <leader>s <Action>(SurroundWith)
