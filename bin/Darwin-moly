@@ -35,6 +35,7 @@ for brewPkg in \
     pstree \
     readline \
     rlwrap \
+    sponge \
     taskwarrior-tui \
     tig \
     tmux \

@@ -24,10 +24,8 @@ nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
 vmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
 nmap <leader>td <Action>(ActivateTODOToolWindow)
 
-nmap <leader>D <Action>(Debug)
 nmap <leader>R <Action>(Run)
 nmap <leader>ra <Action>(Rerun)
-nmap <leader>re <Action>(Resume)
 nmap <leader>rs <Action>(Stop)
 
 nmap <leader>fs <Action>(GotoSymbol)
@@ -45,9 +43,11 @@ nmap <Leader>se <Action>(ShowErrorDescription)
 
 vmap <leader>ec <Action>(EvaluateExpression)
 
-nmap <leader>si <Action>(StepInto)
-nmap <leader>sou <Action>(StepOut)
-nmap <leader>sov <Action>(StepOver)
+nmap <leader>D <Action>(Debug)
+nmap <leader>sj <Action>(StepInto)
+nmap <leader>sk <Action>(StepOut)
+nmap <leader>sl <Action>(StepOver)
+nmap <leader>re <Action>(Resume)
 
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
@@ -87,4 +87,16 @@ vnoremap <Leader>c "+y
 nmap <leader>rl <Action>(RecentLocations)
 
 " Surround (ie; if/else, etc)
-map <leader>s <Action>(SurroundWith)
+map <leader>su <Action>(SurroundWith)
+
+" Jump between methods:
+nmap [m <Action>(MethodUp)
+nmap ]m <Action>(MethodDown)
+
+" Jump between changes.
+nmap [c <Action>(VcsShowPrevChangeMarker)
+nmap ]c <Action>(VcsShowNextChangeMarker)
+
+" Spaces before or after lines:
+nnoremap [<Space> O<Esc>j
+nnoremap ]<Space> o<Esc>k
