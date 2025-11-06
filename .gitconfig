@@ -43,10 +43,13 @@
 [rebase]
     autosquash  = true
 
-[mergetool "nvimdiff"]
-  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+#[mergetool "nvimdiff"]
+  #cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
   #cmd = nvim -d $LOCAL $REMOTE
   #cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[mergetool "vimdiff"]
+    layout = LOCAL,MERGED,REMOTE
 
 [include]
     path        = .gitconfig.local
