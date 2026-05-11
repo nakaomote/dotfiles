@@ -50,14 +50,18 @@ require("dapui").setup({
 })
 
 -- LSP shortcuts, the way nature intended.
-vim.keymap.del('n', 'gri')
-vim.keymap.del('n', 'grr')
 vim.keymap.del('n', 'gra')
+vim.keymap.del('n', 'gri')
 vim.keymap.del('n', 'grn')
+vim.keymap.del('n', 'grr')
+vim.keymap.del('n', 'grt')
+vim.keymap.del('n', 'grx')
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, { noremap = true, silent = true })
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap = true, silent = true })
+vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, { noremap = true, silent = true })
 vim.keymap.set('n', 'gA', vim.lsp.buf.code_action, { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>se', vim.diagnostic.open_float)
 
 require'marks'.setup {
   -- whether to map keybinds or not. default true
