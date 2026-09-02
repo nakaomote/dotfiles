@@ -34,6 +34,7 @@ nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fa <Action>(GotoAction)
 nmap <leader>am <Action>(GotoAction)
 nmap <leader>gr <Action>(FindInPath)
+vmap <leader>gr <Action>(FindInPath)
 
 nmap <leader>cn <Action>(NewFile)
 

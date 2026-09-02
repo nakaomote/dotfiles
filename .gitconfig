@@ -21,7 +21,8 @@
     remote      =  green
 
 [merge]
-    tool        = nvimdiff
+    tool          = nvimdiff
+    conflictstyle = zdiff3
 
 [tool]
     tool        = nvimdiff
