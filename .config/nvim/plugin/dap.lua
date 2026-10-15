@@ -59,7 +59,10 @@ vim.keymap.del('n', 'grx')
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, { noremap = true, silent = true })
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap = true, silent = true })
 vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, { noremap = true, silent = true })
-vim.keymap.set('n', 'gA', vim.lsp.buf.code_action, { noremap = true, silent = true })
+vim.keymap.set({'n', 'i', 'x'}, '<M-CR>', vim.lsp.buf.code_action, {
+  noremap = true,
+  silent = true,
+})
 vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>se', vim.diagnostic.open_float)
 
