@@ -144,21 +144,18 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { "pyright", "pylsp", "ts_ls", },
+  ensure_installed = { "pyright", "ts_ls", },
   handlers = {
     lsp_zero.default_setup,
   },
 })
 
-vim.lsp.config('pylsp', {
+vim.lsp.config("pyright", {
   settings = {
-    pylsp = {
-      plugins = {
-        rope_autoimport = {
-          enabled = true,
-          completions = { enabled = true },
-          code_actions = { enabled = true },
-        },
+    python = {
+      analysis = {
+        autoImportCompletions = true,
+        indexing = true,
       },
     },
   },
