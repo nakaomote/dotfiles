@@ -52,7 +52,7 @@ engines {
   layout_option : ""
   rank : 0
 }
-active_on_launch: False
+active_on_launch: True
 mozc_renderer {
   # Set 'False' to use IBus' candidate window.
   enabled : True
