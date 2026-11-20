@@ -263,3 +263,7 @@ autocmd VimEnter *.go NvimTreeOpen
 
 " close quickfix window:
 autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
+
+" leader as space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
