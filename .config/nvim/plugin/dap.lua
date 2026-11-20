@@ -180,3 +180,7 @@ require("gopher").setup {
 
 -- Trailblazer
 require("trailblazer").setup()
+
+-- leader as space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "

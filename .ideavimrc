@@ -101,3 +101,6 @@ nmap ]c <Action>(VcsShowNextChangeMarker)
 " Spaces before or after lines:
 nnoremap [<Space> O<Esc>j
 nnoremap ]<Space> o<Esc>k
+
+let mapleader = " "
+let maplocalleader = " "
