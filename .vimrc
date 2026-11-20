@@ -1,3 +1,7 @@
+" Leader as space.
+let mapleader = " "
+let maplocalleader = " "
+
 " Use vim defaults.
 set nocompatible
 
